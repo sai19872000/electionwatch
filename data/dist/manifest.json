@@ -1,0 +1,77 @@
+{
+  "india_constituencies_S03.topojson": {
+    "logical": "india_constituencies_S03.topojson",
+    "hashed": "india_constituencies_S03.b063fb42.topojson",
+    "sizeRaw": 75036
+  },
+  "india_constituencies_S11.topojson": {
+    "logical": "india_constituencies_S11.topojson",
+    "hashed": "india_constituencies_S11.cd055ef8.topojson",
+    "sizeRaw": 71241
+  },
+  "india_constituencies_S22.topojson": {
+    "logical": "india_constituencies_S22.topojson",
+    "hashed": "india_constituencies_S22.30f20be0.topojson",
+    "sizeRaw": 153311
+  },
+  "india_constituencies_S25.topojson": {
+    "logical": "india_constituencies_S25.topojson",
+    "hashed": "india_constituencies_S25.322fd94d.topojson",
+    "sizeRaw": 167034
+  },
+  "india_constituencies_S26.topojson": {
+    "logical": "india_constituencies_S26.topojson",
+    "hashed": "india_constituencies_S26.a19a7283.topojson",
+    "sizeRaw": 10809
+  },
+  "india_overview.svg": {
+    "logical": "india_overview.svg",
+    "hashed": "india_overview.378a9d11.svg",
+    "sizeRaw": 22486
+  },
+  "historical_2019_ls.json": {
+    "logical": "historical_2019_ls.json",
+    "hashed": "historical_2019_ls.fa7cb07a.json",
+    "sizeRaw": 73899
+  },
+  "historical_2024_ls.json": {
+    "logical": "historical_2024_ls.json",
+    "hashed": "historical_2024_ls.b4e488c0.json",
+    "sizeRaw": 73831
+  },
+  "historical_assembly_2021_assam.json": {
+    "logical": "historical_assembly_2021_assam.json",
+    "hashed": "historical_assembly_2021_assam.729657b0.json",
+    "sizeRaw": 13254
+  },
+  "historical_assembly_2021_kerala.json": {
+    "logical": "historical_assembly_2021_kerala.json",
+    "hashed": "historical_assembly_2021_kerala.8bd69f77.json",
+    "sizeRaw": 17565
+  },
+  "historical_assembly_2021_tamilnadu.json": {
+    "logical": "historical_assembly_2021_tamilnadu.json",
+    "hashed": "historical_assembly_2021_tamilnadu.ef9ca4da.json",
+    "sizeRaw": 28893
+  },
+  "historical_assembly_2021_westbengal.json": {
+    "logical": "historical_assembly_2021_westbengal.json",
+    "hashed": "historical_assembly_2021_westbengal.55746161.json",
+    "sizeRaw": 32460
+  },
+  "historical_assembly_2021_puducherry.json": {
+    "logical": "historical_assembly_2021_puducherry.json",
+    "hashed": "historical_assembly_2021_puducherry.eefa0fe6.json",
+    "sizeRaw": 3661
+  },
+  "alliance_map_2026.json": {
+    "logical": "alliance_map_2026.json",
+    "hashed": "alliance_map_2026.2739d48c.json",
+    "sizeRaw": 6857
+  },
+  "search_index.json": {
+    "logical": "search_index.json",
+    "hashed": "search_index.c64a4939.json",
+    "sizeRaw": 116747
+  }
+}
