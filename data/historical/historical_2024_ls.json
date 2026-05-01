@@ -1,0 +1,6172 @@
+[
+  {
+    "pc_id": "AS01",
+    "pc_name": "Dhubri",
+    "state_code": "S03",
+    "winner_party": "AIUDF",
+    "vote_share": {
+      "AIUDF": 44.3,
+      "INC": 25.8,
+      "BJP": 13.2,
+      "AGP": 8.4,
+      "others": 8.3
+    }
+  },
+  {
+    "pc_id": "AS02",
+    "pc_name": "Kokrajhar",
+    "state_code": "S03",
+    "winner_party": "UPPL",
+    "vote_share": {
+      "UPPL": 38.2,
+      "BJP": 22.4,
+      "INC": 18.6,
+      "BPF": 11.0,
+      "others": 9.8
+    }
+  },
+  {
+    "pc_id": "AS03",
+    "pc_name": "Barpeta",
+    "state_code": "S03",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.1,
+      "BJP": 28.6,
+      "AIUDF": 15.3,
+      "AGP": 7.2,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "AS04",
+    "pc_name": "Darrang-Udalguri",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 47.8,
+      "INC": 27.4,
+      "AIUDF": 10.8,
+      "others": 14.0
+    }
+  },
+  {
+    "pc_id": "AS05",
+    "pc_name": "Mangaldoi",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 49.2,
+      "INC": 31.5,
+      "AIUDF": 8.4,
+      "others": 10.9
+    }
+  },
+  {
+    "pc_id": "AS06",
+    "pc_name": "Tezpur",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 51.4,
+      "INC": 29.2,
+      "AGP": 8.3,
+      "others": 11.1
+    }
+  },
+  {
+    "pc_id": "AS07",
+    "pc_name": "Nowgong",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.7,
+      "INC": 28.6,
+      "AIUDF": 9.2,
+      "others": 13.5
+    }
+  },
+  {
+    "pc_id": "AS08",
+    "pc_name": "Kaliabor",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.3,
+      "INC": 30.4,
+      "AGP": 9.4,
+      "others": 13.9
+    }
+  },
+  {
+    "pc_id": "AS09",
+    "pc_name": "Jorhat",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 50.8,
+      "INC": 32.1,
+      "AGP": 6.9,
+      "others": 10.2
+    }
+  },
+  {
+    "pc_id": "AS10",
+    "pc_name": "Dibrugarh",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 55.2,
+      "INC": 28.4,
+      "others": 16.4
+    }
+  },
+  {
+    "pc_id": "AS11",
+    "pc_name": "Lakhimpur",
+    "state_code": "S03",
+    "winner_party": "AGP",
+    "vote_share": {
+      "AGP": 41.2,
+      "BJP": 22.1,
+      "INC": 22.4,
+      "others": 14.3
+    }
+  },
+  {
+    "pc_id": "AS12",
+    "pc_name": "Sibsagar",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 44.8,
+      "INC": 34.6,
+      "AGP": 8.2,
+      "others": 12.4
+    }
+  },
+  {
+    "pc_id": "AS13",
+    "pc_name": "Diphu",
+    "state_code": "S03",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 38.4,
+      "BJP": 32.5,
+      "NPP": 14.2,
+      "others": 14.9
+    }
+  },
+  {
+    "pc_id": "AS14",
+    "pc_name": "Silchar",
+    "state_code": "S03",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 52.4,
+      "INC": 34.8,
+      "AIUDF": 7.6,
+      "others": 5.2
+    }
+  },
+  {
+    "pc_id": "WB01",
+    "pc_name": "Cooch Behar",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 47.2,
+      "TMC": 43.8,
+      "INC": 4.1,
+      "others": 4.9
+    }
+  },
+  {
+    "pc_id": "WB02",
+    "pc_name": "Alipurduars",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.8,
+      "TMC": 44.2,
+      "INC": 4.3,
+      "others": 5.7
+    }
+  },
+  {
+    "pc_id": "WB03",
+    "pc_name": "Jalpaiguri",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 44.9,
+      "TMC": 43.6,
+      "INC": 6.8,
+      "others": 4.7
+    }
+  },
+  {
+    "pc_id": "WB04",
+    "pc_name": "Darjeeling",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.4,
+      "TMC": 35.2,
+      "INC": 10.1,
+      "GNLF": 3.8,
+      "others": 2.5
+    }
+  },
+  {
+    "pc_id": "WB05",
+    "pc_name": "Raiganj",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 43.8,
+      "BJP": 38.4,
+      "INC": 12.6,
+      "others": 5.2
+    }
+  },
+  {
+    "pc_id": "WB06",
+    "pc_name": "Balurghat",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 44.2,
+      "BJP": 39.8,
+      "INC": 9.4,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB07",
+    "pc_name": "Maldaha Uttar",
+    "state_code": "S25",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 38.4,
+      "BJP": 33.2,
+      "TMC": 22.4,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "WB08",
+    "pc_name": "Maldaha Dakshin",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 40.2,
+      "INC": 34.8,
+      "BJP": 20.3,
+      "others": 4.7
+    }
+  },
+  {
+    "pc_id": "WB09",
+    "pc_name": "Jangipur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 46.4,
+      "BJP": 28.2,
+      "INC": 18.6,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "WB10",
+    "pc_name": "Baharampur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 41.8,
+      "INC": 34.2,
+      "BJP": 18.9,
+      "others": 5.1
+    }
+  },
+  {
+    "pc_id": "WB11",
+    "pc_name": "Murshidabad",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 50.2,
+      "BJP": 24.4,
+      "INC": 18.8,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB12",
+    "pc_name": "Krishnanagar",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 45.6,
+      "BJP": 39.2,
+      "INC": 7.8,
+      "others": 7.4
+    }
+  },
+  {
+    "pc_id": "WB13",
+    "pc_name": "Ranaghat",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.8,
+      "TMC": 44.2,
+      "INC": 4.6,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "WB14",
+    "pc_name": "Bangaon",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.4,
+      "TMC": 43.2,
+      "INC": 4.3,
+      "others": 4.1
+    }
+  },
+  {
+    "pc_id": "WB15",
+    "pc_name": "Barrackpur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 44.6,
+      "BJP": 41.8,
+      "INC": 6.2,
+      "others": 7.4
+    }
+  },
+  {
+    "pc_id": "WB16",
+    "pc_name": "Dum Dum",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 47.4,
+      "BJP": 38.2,
+      "INC": 7.6,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "WB17",
+    "pc_name": "Barasat",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 48.8,
+      "BJP": 36.4,
+      "INC": 8.2,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB18",
+    "pc_name": "Basirhat",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 46.2,
+      "BJP": 36.8,
+      "INC": 9.8,
+      "others": 7.2
+    }
+  },
+  {
+    "pc_id": "WB19",
+    "pc_name": "Jaynagar",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 52.4,
+      "BJP": 32.8,
+      "INC": 6.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "WB20",
+    "pc_name": "Mathurapur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 54.2,
+      "BJP": 31.6,
+      "INC": 5.8,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "WB21",
+    "pc_name": "Diamond Harbour",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 58.4,
+      "BJP": 29.4,
+      "INC": 5.2,
+      "others": 7.0
+    }
+  },
+  {
+    "pc_id": "WB22",
+    "pc_name": "Jadavpur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 50.8,
+      "BJP": 30.4,
+      "INC": 8.6,
+      "CPIM": 6.4,
+      "others": 3.8
+    }
+  },
+  {
+    "pc_id": "WB23",
+    "pc_name": "Kolkata Dakshin",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 52.4,
+      "BJP": 30.8,
+      "INC": 7.2,
+      "CPIM": 5.4,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "WB24",
+    "pc_name": "Kolkata Uttar",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 53.6,
+      "BJP": 29.2,
+      "INC": 8.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "WB25",
+    "pc_name": "Howrah",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 48.2,
+      "BJP": 36.4,
+      "INC": 8.2,
+      "others": 7.2
+    }
+  },
+  {
+    "pc_id": "WB26",
+    "pc_name": "Uluberia",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 50.6,
+      "BJP": 36.2,
+      "INC": 6.8,
+      "others": 6.4
+    }
+  },
+  {
+    "pc_id": "WB27",
+    "pc_name": "Srerampur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 47.8,
+      "BJP": 36.6,
+      "INC": 7.4,
+      "CPIM": 4.8,
+      "others": 3.4
+    }
+  },
+  {
+    "pc_id": "WB28",
+    "pc_name": "Hooghly",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.2,
+      "TMC": 44.8,
+      "INC": 4.2,
+      "others": 4.8
+    }
+  },
+  {
+    "pc_id": "WB29",
+    "pc_name": "Arambag",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 46.4,
+      "BJP": 42.2,
+      "INC": 5.8,
+      "others": 5.6
+    }
+  },
+  {
+    "pc_id": "WB30",
+    "pc_name": "Tamluk",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 51.4,
+      "BJP": 36.2,
+      "INC": 5.8,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB31",
+    "pc_name": "Kanthi",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.8,
+      "TMC": 45.4,
+      "INC": 4.2,
+      "others": 3.6
+    }
+  },
+  {
+    "pc_id": "WB32",
+    "pc_name": "Ghatal",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 52.2,
+      "BJP": 35.4,
+      "INC": 5.8,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB33",
+    "pc_name": "Jhargram",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 48.4,
+      "BJP": 40.2,
+      "INC": 5.4,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "WB34",
+    "pc_name": "Medinipur",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 47.6,
+      "TMC": 44.8,
+      "INC": 4.2,
+      "others": 3.4
+    }
+  },
+  {
+    "pc_id": "WB35",
+    "pc_name": "Purulia",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.4,
+      "TMC": 40.8,
+      "INC": 5.4,
+      "others": 5.4
+    }
+  },
+  {
+    "pc_id": "WB36",
+    "pc_name": "Bankura",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 46.2,
+      "BJP": 41.8,
+      "INC": 5.4,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "WB37",
+    "pc_name": "Bishnupur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 44.8,
+      "BJP": 44.2,
+      "INC": 5.8,
+      "others": 5.2
+    }
+  },
+  {
+    "pc_id": "WB38",
+    "pc_name": "Bardhaman Purba",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.4,
+      "TMC": 44.2,
+      "INC": 4.8,
+      "others": 4.6
+    }
+  },
+  {
+    "pc_id": "WB39",
+    "pc_name": "Bardhaman-Durgapur",
+    "state_code": "S25",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 47.2,
+      "TMC": 41.8,
+      "INC": 5.6,
+      "CPIM": 2.8,
+      "others": 2.6
+    }
+  },
+  {
+    "pc_id": "WB40",
+    "pc_name": "Asansol",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 43.8,
+      "BJP": 40.6,
+      "INC": 7.2,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "WB41",
+    "pc_name": "Bolpur",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 47.2,
+      "BJP": 38.4,
+      "INC": 7.8,
+      "CPIM": 3.4,
+      "others": 3.2
+    }
+  },
+  {
+    "pc_id": "WB42",
+    "pc_name": "Birbhum",
+    "state_code": "S25",
+    "winner_party": "TMC",
+    "vote_share": {
+      "TMC": 48.6,
+      "BJP": 36.4,
+      "INC": 7.2,
+      "others": 7.8
+    }
+  },
+  {
+    "pc_id": "TN01",
+    "pc_name": "Thiruvallur (SC)",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 45.8,
+      "INC": 12.2,
+      "AIADMK": 26.4,
+      "BJP": 8.6,
+      "others": 7.0
+    }
+  },
+  {
+    "pc_id": "TN02",
+    "pc_name": "Chennai North",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 52.4,
+      "AIADMK": 24.8,
+      "BJP": 10.2,
+      "INC": 8.4,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN03",
+    "pc_name": "Chennai South",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 50.2,
+      "AIADMK": 26.4,
+      "BJP": 11.8,
+      "INC": 8.2,
+      "others": 3.4
+    }
+  },
+  {
+    "pc_id": "TN04",
+    "pc_name": "Chennai Central",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 51.6,
+      "AIADMK": 24.8,
+      "INC": 8.6,
+      "BJP": 9.4,
+      "others": 5.6
+    }
+  },
+  {
+    "pc_id": "TN05",
+    "pc_name": "Kancheepuram (SC)",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.4,
+      "AIADMK": 28.2,
+      "BJP": 12.6,
+      "DMK": 12.4,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "TN06",
+    "pc_name": "Arakkonam (SC)",
+    "state_code": "S22",
+    "winner_party": "VCK",
+    "vote_share": {
+      "VCK": 38.4,
+      "AIADMK": 28.6,
+      "BJP": 10.8,
+      "DMK": 10.2,
+      "INC": 8.4,
+      "others": 3.6
+    }
+  },
+  {
+    "pc_id": "TN07",
+    "pc_name": "Vellore",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 48.4,
+      "AIADMK": 30.2,
+      "BJP": 11.6,
+      "INC": 6.2,
+      "others": 3.6
+    }
+  },
+  {
+    "pc_id": "TN08",
+    "pc_name": "Krishnagiri",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 46.8,
+      "AIADMK": 32.4,
+      "BJP": 10.4,
+      "INC": 6.8,
+      "others": 3.6
+    }
+  },
+  {
+    "pc_id": "TN09",
+    "pc_name": "Dharmapuri",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.2,
+      "AIADMK": 34.4,
+      "BJP": 12.8,
+      "DMK": 8.6,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "TN10",
+    "pc_name": "Tiruvannamalai",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 47.2,
+      "AIADMK": 30.8,
+      "BJP": 9.6,
+      "INC": 8.2,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN11",
+    "pc_name": "Arani",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 48.6,
+      "AIADMK": 28.4,
+      "BJP": 8.4,
+      "INC": 9.2,
+      "others": 5.4
+    }
+  },
+  {
+    "pc_id": "TN12",
+    "pc_name": "Viluppuram (SC)",
+    "state_code": "S22",
+    "winner_party": "VCK",
+    "vote_share": {
+      "VCK": 40.8,
+      "AIADMK": 26.4,
+      "DMK": 15.2,
+      "BJP": 8.6,
+      "INC": 5.4,
+      "others": 3.6
+    }
+  },
+  {
+    "pc_id": "TN13",
+    "pc_name": "Kallakurichi (SC)",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.2,
+      "AIADMK": 30.8,
+      "BJP": 8.6,
+      "DMK": 12.4,
+      "others": 8.0
+    }
+  },
+  {
+    "pc_id": "TN14",
+    "pc_name": "Salem",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 46.8,
+      "AIADMK": 32.4,
+      "BJP": 10.8,
+      "INC": 6.2,
+      "others": 3.8
+    }
+  },
+  {
+    "pc_id": "TN15",
+    "pc_name": "Namakkal",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 48.2,
+      "AIADMK": 30.4,
+      "BJP": 8.4,
+      "INC": 8.6,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "TN16",
+    "pc_name": "Erode (SC)",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.4,
+      "AIADMK": 30.2,
+      "DMK": 14.8,
+      "BJP": 8.6,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "TN17",
+    "pc_name": "Tiruppur",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 48.8,
+      "AIADMK": 28.6,
+      "BJP": 10.2,
+      "INC": 8.4,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "TN18",
+    "pc_name": "Nilgiris (SC)",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.6,
+      "AIADMK": 26.8,
+      "DMK": 14.2,
+      "BJP": 8.4,
+      "others": 8.0
+    }
+  },
+  {
+    "pc_id": "TN19",
+    "pc_name": "Coimbatore",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 44.8,
+      "BJP": 24.6,
+      "AIADMK": 22.4,
+      "INC": 4.2,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "TN20",
+    "pc_name": "Pollachi",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 39.4,
+      "AIADMK": 30.2,
+      "BJP": 12.8,
+      "DMK": 12.4,
+      "others": 5.2
+    }
+  },
+  {
+    "pc_id": "TN21",
+    "pc_name": "Dindigul",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "AIADMK": 28.6,
+      "DMK": 14.2,
+      "BJP": 8.4,
+      "others": 8.0
+    }
+  },
+  {
+    "pc_id": "TN22",
+    "pc_name": "Karur",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 50.4,
+      "AIADMK": 28.8,
+      "BJP": 8.4,
+      "INC": 8.2,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN23",
+    "pc_name": "Tiruchirappalli",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 52.4,
+      "AIADMK": 26.4,
+      "BJP": 8.2,
+      "INC": 8.6,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "TN24",
+    "pc_name": "Perambalur (SC)",
+    "state_code": "S22",
+    "winner_party": "CPI(M)",
+    "vote_share": {
+      "CPI(M)": 40.2,
+      "AIADMK": 28.4,
+      "BJP": 8.6,
+      "DMK": 14.2,
+      "INC": 5.4,
+      "others": 3.2
+    }
+  },
+  {
+    "pc_id": "TN25",
+    "pc_name": "Cuddalore",
+    "state_code": "S22",
+    "winner_party": "CPI",
+    "vote_share": {
+      "CPI": 38.6,
+      "AIADMK": 28.2,
+      "DMK": 14.8,
+      "BJP": 8.4,
+      "INC": 5.8,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN26",
+    "pc_name": "Chidambaram",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 50.8,
+      "AIADMK": 28.6,
+      "BJP": 8.4,
+      "INC": 8.2,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "TN27",
+    "pc_name": "Mayiladuthurai",
+    "state_code": "S22",
+    "winner_party": "CPI(M)",
+    "vote_share": {
+      "CPI(M)": 40.4,
+      "AIADMK": 26.8,
+      "DMK": 14.4,
+      "BJP": 8.6,
+      "INC": 5.4,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "TN28",
+    "pc_name": "Nagapattinam (SC)",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 52.4,
+      "AIADMK": 26.4,
+      "BJP": 6.8,
+      "INC": 8.4,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "TN29",
+    "pc_name": "Thanjavur",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 52.8,
+      "AIADMK": 26.8,
+      "BJP": 8.4,
+      "INC": 7.8,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN30",
+    "pc_name": "Sivaganga",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "AIADMK": 28.4,
+      "BJP": 8.6,
+      "DMK": 14.4,
+      "others": 7.8
+    }
+  },
+  {
+    "pc_id": "TN31",
+    "pc_name": "Madurai",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 54.8,
+      "AIADMK": 26.4,
+      "BJP": 8.2,
+      "INC": 6.4,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN32",
+    "pc_name": "Dindigul",
+    "state_code": "S22",
+    "winner_party": "CPI",
+    "vote_share": {
+      "CPI": 38.4,
+      "AIADMK": 28.6,
+      "DMK": 14.2,
+      "BJP": 8.4,
+      "INC": 6.2,
+      "others": 4.2
+    }
+  },
+  {
+    "pc_id": "TN33",
+    "pc_name": "Virudhunagar",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 50.4,
+      "AIADMK": 26.8,
+      "BJP": 8.6,
+      "INC": 8.2,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "TN34",
+    "pc_name": "Ramanathapuram",
+    "state_code": "S22",
+    "winner_party": "AIADMK",
+    "vote_share": {
+      "AIADMK": 40.4,
+      "DMK": 32.8,
+      "BJP": 8.6,
+      "INC": 8.4,
+      "others": 9.8
+    }
+  },
+  {
+    "pc_id": "TN35",
+    "pc_name": "Thenkasi",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 52.4,
+      "AIADMK": 26.4,
+      "BJP": 8.2,
+      "INC": 7.8,
+      "others": 5.2
+    }
+  },
+  {
+    "pc_id": "TN36",
+    "pc_name": "Tirunelveli",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 54.6,
+      "AIADMK": 24.8,
+      "BJP": 8.4,
+      "INC": 7.6,
+      "others": 4.6
+    }
+  },
+  {
+    "pc_id": "TN37",
+    "pc_name": "Kanniyakumari",
+    "state_code": "S22",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "BJP": 32.4,
+      "AIADMK": 14.6,
+      "DMK": 8.2,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "TN38",
+    "pc_name": "Thoothukudi",
+    "state_code": "S22",
+    "winner_party": "AIADMK",
+    "vote_share": {
+      "AIADMK": 40.2,
+      "DMK": 34.4,
+      "BJP": 8.6,
+      "INC": 8.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "TN39",
+    "pc_name": "Vellore",
+    "state_code": "S22",
+    "winner_party": "DMK",
+    "vote_share": {
+      "DMK": 48.4,
+      "AIADMK": 28.4,
+      "BJP": 10.4,
+      "INC": 8.2,
+      "others": 4.6
+    }
+  },
+  {
+    "pc_id": "KL01",
+    "pc_name": "Kasaragod",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.4,
+      "BJP": 22.6,
+      "CPI(M)": 26.4,
+      "IUML": 4.2,
+      "others": 4.4
+    }
+  },
+  {
+    "pc_id": "KL02",
+    "pc_name": "Kannur",
+    "state_code": "S11",
+    "winner_party": "CPI(M)",
+    "vote_share": {
+      "CPI(M)": 46.8,
+      "INC": 34.2,
+      "BJP": 12.8,
+      "others": 6.2
+    }
+  },
+  {
+    "pc_id": "KL03",
+    "pc_name": "Vadakara",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.2,
+      "CPI(M)": 34.8,
+      "BJP": 18.4,
+      "others": 6.6
+    }
+  },
+  {
+    "pc_id": "KL04",
+    "pc_name": "Wayanad",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 59.8,
+      "CPI(M)": 27.4,
+      "BJP": 6.8,
+      "others": 6.0
+    }
+  },
+  {
+    "pc_id": "KL05",
+    "pc_name": "Kozhikode",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.4,
+      "CPI(M)": 26.8,
+      "BJP": 16.4,
+      "IUML": 10.2,
+      "others": 6.2
+    }
+  },
+  {
+    "pc_id": "KL06",
+    "pc_name": "Malappuram",
+    "state_code": "S11",
+    "winner_party": "IUML",
+    "vote_share": {
+      "IUML": 64.8,
+      "BJP": 12.4,
+      "CPI(M)": 10.2,
+      "INC": 8.6,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "KL07",
+    "pc_name": "Ponnani",
+    "state_code": "S11",
+    "winner_party": "IUML",
+    "vote_share": {
+      "IUML": 58.4,
+      "BJP": 14.2,
+      "CPI(M)": 12.8,
+      "INC": 8.2,
+      "others": 6.4
+    }
+  },
+  {
+    "pc_id": "KL08",
+    "pc_name": "Palakkad",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 38.4,
+      "CPI(M)": 28.6,
+      "BJP": 24.8,
+      "others": 8.2
+    }
+  },
+  {
+    "pc_id": "KL09",
+    "pc_name": "Alathur (SC)",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.4,
+      "CPI(M)": 32.8,
+      "BJP": 18.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "KL10",
+    "pc_name": "Thrissur",
+    "state_code": "S11",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 38.2,
+      "INC": 34.8,
+      "CPI(M)": 24.6,
+      "others": 2.4
+    }
+  },
+  {
+    "pc_id": "KL11",
+    "pc_name": "Chalakudy",
+    "state_code": "S11",
+    "winner_party": "CMP",
+    "vote_share": {
+      "CMP": 36.8,
+      "BJP": 26.4,
+      "INC": 22.4,
+      "CPI(M)": 8.2,
+      "others": 6.2
+    }
+  },
+  {
+    "pc_id": "KL12",
+    "pc_name": "Ernakulam",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 46.8,
+      "CPI(M)": 24.4,
+      "BJP": 18.2,
+      "others": 10.6
+    }
+  },
+  {
+    "pc_id": "KL13",
+    "pc_name": "Idukki",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.2,
+      "CPI(M)": 28.6,
+      "BJP": 22.4,
+      "KC(M)": 5.4,
+      "others": 3.4
+    }
+  },
+  {
+    "pc_id": "KL14",
+    "pc_name": "Kottayam",
+    "state_code": "S11",
+    "winner_party": "KC(M)",
+    "vote_share": {
+      "KC(M)": 36.4,
+      "CPI(M)": 28.2,
+      "BJP": 18.8,
+      "INC": 10.4,
+      "others": 6.2
+    }
+  },
+  {
+    "pc_id": "KL15",
+    "pc_name": "Alappuzha",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "CPI(M)": 36.4,
+      "BJP": 16.4,
+      "others": 6.4
+    }
+  },
+  {
+    "pc_id": "KL16",
+    "pc_name": "Mavelikkara (SC)",
+    "state_code": "S11",
+    "winner_party": "NCP-K",
+    "vote_share": {
+      "NCP-K": 34.8,
+      "CPI(M)": 30.4,
+      "BJP": 14.8,
+      "INC": 12.8,
+      "others": 7.2
+    }
+  },
+  {
+    "pc_id": "KL17",
+    "pc_name": "Pathanamthitta",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.4,
+      "BJP": 26.8,
+      "CPI(M)": 22.6,
+      "KC(M)": 4.2,
+      "others": 4.0
+    }
+  },
+  {
+    "pc_id": "KL18",
+    "pc_name": "Kollam",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "CPI(M)": 28.4,
+      "BJP": 22.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "KL19",
+    "pc_name": "Attingal",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 38.4,
+      "CPI(M)": 32.8,
+      "BJP": 20.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "KL20",
+    "pc_name": "Thiruvananthapuram",
+    "state_code": "S11",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 40.8,
+      "BJP": 26.4,
+      "CPI(M)": 24.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "PY01",
+    "pc_name": "Pondicherry",
+    "state_code": "U06",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 46.4,
+      "AINRC": 26.8,
+      "BJP": 12.2,
+      "DMK": 8.4,
+      "others": 6.2
+    }
+  },
+  {
+    "pc_id": "S0101",
+    "pc_name": "Andhra Pradesh PC-1",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0102",
+    "pc_name": "Andhra Pradesh PC-2",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0103",
+    "pc_name": "Andhra Pradesh PC-3",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0104",
+    "pc_name": "Andhra Pradesh PC-4",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0105",
+    "pc_name": "Andhra Pradesh PC-5",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0106",
+    "pc_name": "Andhra Pradesh PC-6",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0107",
+    "pc_name": "Andhra Pradesh PC-7",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0108",
+    "pc_name": "Andhra Pradesh PC-8",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0109",
+    "pc_name": "Andhra Pradesh PC-9",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0110",
+    "pc_name": "Andhra Pradesh PC-10",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0111",
+    "pc_name": "Andhra Pradesh PC-11",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0112",
+    "pc_name": "Andhra Pradesh PC-12",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0113",
+    "pc_name": "Andhra Pradesh PC-13",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0114",
+    "pc_name": "Andhra Pradesh PC-14",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0115",
+    "pc_name": "Andhra Pradesh PC-15",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0116",
+    "pc_name": "Andhra Pradesh PC-16",
+    "state_code": "S01",
+    "winner_party": "TDP",
+    "vote_share": {
+      "TDP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0117",
+    "pc_name": "Andhra Pradesh PC-17",
+    "state_code": "S01",
+    "winner_party": "JANASENA",
+    "vote_share": {
+      "JANASENA": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0118",
+    "pc_name": "Andhra Pradesh PC-18",
+    "state_code": "S01",
+    "winner_party": "JANASENA",
+    "vote_share": {
+      "JANASENA": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0119",
+    "pc_name": "Andhra Pradesh PC-19",
+    "state_code": "S01",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0120",
+    "pc_name": "Andhra Pradesh PC-20",
+    "state_code": "S01",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0121",
+    "pc_name": "Andhra Pradesh PC-21",
+    "state_code": "S01",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0122",
+    "pc_name": "Andhra Pradesh PC-22",
+    "state_code": "S01",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0123",
+    "pc_name": "Andhra Pradesh PC-23",
+    "state_code": "S01",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0124",
+    "pc_name": "Andhra Pradesh PC-24",
+    "state_code": "S01",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0125",
+    "pc_name": "Andhra Pradesh PC-25",
+    "state_code": "S01",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0201",
+    "pc_name": "Arunachal Pradesh PC-1",
+    "state_code": "S02",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0202",
+    "pc_name": "Arunachal Pradesh PC-2",
+    "state_code": "S02",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0401",
+    "pc_name": "Bihar PC-1",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0402",
+    "pc_name": "Bihar PC-2",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0403",
+    "pc_name": "Bihar PC-3",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0404",
+    "pc_name": "Bihar PC-4",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0405",
+    "pc_name": "Bihar PC-5",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0406",
+    "pc_name": "Bihar PC-6",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0407",
+    "pc_name": "Bihar PC-7",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0408",
+    "pc_name": "Bihar PC-8",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0409",
+    "pc_name": "Bihar PC-9",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0410",
+    "pc_name": "Bihar PC-10",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0411",
+    "pc_name": "Bihar PC-11",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0412",
+    "pc_name": "Bihar PC-12",
+    "state_code": "S04",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0413",
+    "pc_name": "Bihar PC-13",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0414",
+    "pc_name": "Bihar PC-14",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0415",
+    "pc_name": "Bihar PC-15",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0416",
+    "pc_name": "Bihar PC-16",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0417",
+    "pc_name": "Bihar PC-17",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0418",
+    "pc_name": "Bihar PC-18",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0419",
+    "pc_name": "Bihar PC-19",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0420",
+    "pc_name": "Bihar PC-20",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0421",
+    "pc_name": "Bihar PC-21",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0422",
+    "pc_name": "Bihar PC-22",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0423",
+    "pc_name": "Bihar PC-23",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0424",
+    "pc_name": "Bihar PC-24",
+    "state_code": "S04",
+    "winner_party": "JD(U)",
+    "vote_share": {
+      "JD(U)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0425",
+    "pc_name": "Bihar PC-25",
+    "state_code": "S04",
+    "winner_party": "HAM(S)",
+    "vote_share": {
+      "HAM(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0426",
+    "pc_name": "Bihar PC-26",
+    "state_code": "S04",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0427",
+    "pc_name": "Bihar PC-27",
+    "state_code": "S04",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0428",
+    "pc_name": "Bihar PC-28",
+    "state_code": "S04",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0429",
+    "pc_name": "Bihar PC-29",
+    "state_code": "S04",
+    "winner_party": "RJD",
+    "vote_share": {
+      "RJD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0430",
+    "pc_name": "Bihar PC-30",
+    "state_code": "S04",
+    "winner_party": "RJD",
+    "vote_share": {
+      "RJD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0431",
+    "pc_name": "Bihar PC-31",
+    "state_code": "S04",
+    "winner_party": "RJD",
+    "vote_share": {
+      "RJD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0432",
+    "pc_name": "Bihar PC-32",
+    "state_code": "S04",
+    "winner_party": "RJD",
+    "vote_share": {
+      "RJD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0433",
+    "pc_name": "Bihar PC-33",
+    "state_code": "S04",
+    "winner_party": "CPI(ML)",
+    "vote_share": {
+      "CPI(ML)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0434",
+    "pc_name": "Bihar PC-34",
+    "state_code": "S04",
+    "winner_party": "CPI(ML)",
+    "vote_share": {
+      "CPI(ML)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0435",
+    "pc_name": "Bihar PC-35",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0436",
+    "pc_name": "Bihar PC-36",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0437",
+    "pc_name": "Bihar PC-37",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0438",
+    "pc_name": "Bihar PC-38",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0439",
+    "pc_name": "Bihar PC-39",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0440",
+    "pc_name": "Bihar PC-40",
+    "state_code": "S04",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S0501",
+    "pc_name": "Chhattisgarh PC-1",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0502",
+    "pc_name": "Chhattisgarh PC-2",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0503",
+    "pc_name": "Chhattisgarh PC-3",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0504",
+    "pc_name": "Chhattisgarh PC-4",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0505",
+    "pc_name": "Chhattisgarh PC-5",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0506",
+    "pc_name": "Chhattisgarh PC-6",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0507",
+    "pc_name": "Chhattisgarh PC-7",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0508",
+    "pc_name": "Chhattisgarh PC-8",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0509",
+    "pc_name": "Chhattisgarh PC-9",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0510",
+    "pc_name": "Chhattisgarh PC-10",
+    "state_code": "S05",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0511",
+    "pc_name": "Chhattisgarh PC-11",
+    "state_code": "S05",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0601",
+    "pc_name": "Goa PC-1",
+    "state_code": "S06",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0602",
+    "pc_name": "Goa PC-2",
+    "state_code": "S06",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0701",
+    "pc_name": "Gujarat PC-1",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0702",
+    "pc_name": "Gujarat PC-2",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0703",
+    "pc_name": "Gujarat PC-3",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0704",
+    "pc_name": "Gujarat PC-4",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0705",
+    "pc_name": "Gujarat PC-5",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0706",
+    "pc_name": "Gujarat PC-6",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0707",
+    "pc_name": "Gujarat PC-7",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0708",
+    "pc_name": "Gujarat PC-8",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0709",
+    "pc_name": "Gujarat PC-9",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0710",
+    "pc_name": "Gujarat PC-10",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0711",
+    "pc_name": "Gujarat PC-11",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0712",
+    "pc_name": "Gujarat PC-12",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0713",
+    "pc_name": "Gujarat PC-13",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0714",
+    "pc_name": "Gujarat PC-14",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0715",
+    "pc_name": "Gujarat PC-15",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0716",
+    "pc_name": "Gujarat PC-16",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0717",
+    "pc_name": "Gujarat PC-17",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0718",
+    "pc_name": "Gujarat PC-18",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0719",
+    "pc_name": "Gujarat PC-19",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0720",
+    "pc_name": "Gujarat PC-20",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0721",
+    "pc_name": "Gujarat PC-21",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0722",
+    "pc_name": "Gujarat PC-22",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0723",
+    "pc_name": "Gujarat PC-23",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0724",
+    "pc_name": "Gujarat PC-24",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0725",
+    "pc_name": "Gujarat PC-25",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0726",
+    "pc_name": "Gujarat PC-26",
+    "state_code": "S07",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0801",
+    "pc_name": "Haryana PC-1",
+    "state_code": "S08",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0802",
+    "pc_name": "Haryana PC-2",
+    "state_code": "S08",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0803",
+    "pc_name": "Haryana PC-3",
+    "state_code": "S08",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0804",
+    "pc_name": "Haryana PC-4",
+    "state_code": "S08",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0805",
+    "pc_name": "Haryana PC-5",
+    "state_code": "S08",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0806",
+    "pc_name": "Haryana PC-6",
+    "state_code": "S08",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0807",
+    "pc_name": "Haryana PC-7",
+    "state_code": "S08",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0808",
+    "pc_name": "Haryana PC-8",
+    "state_code": "S08",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0809",
+    "pc_name": "Haryana PC-9",
+    "state_code": "S08",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0810",
+    "pc_name": "Haryana PC-10",
+    "state_code": "S08",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0901",
+    "pc_name": "Himachal Pradesh PC-1",
+    "state_code": "S09",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0902",
+    "pc_name": "Himachal Pradesh PC-2",
+    "state_code": "S09",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0903",
+    "pc_name": "Himachal Pradesh PC-3",
+    "state_code": "S09",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S0904",
+    "pc_name": "Himachal Pradesh PC-4",
+    "state_code": "S09",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1001",
+    "pc_name": "Jharkhand PC-1",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1002",
+    "pc_name": "Jharkhand PC-2",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1003",
+    "pc_name": "Jharkhand PC-3",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1004",
+    "pc_name": "Jharkhand PC-4",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1005",
+    "pc_name": "Jharkhand PC-5",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1006",
+    "pc_name": "Jharkhand PC-6",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1007",
+    "pc_name": "Jharkhand PC-7",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1008",
+    "pc_name": "Jharkhand PC-8",
+    "state_code": "S10",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1009",
+    "pc_name": "Jharkhand PC-9",
+    "state_code": "S10",
+    "winner_party": "JMM",
+    "vote_share": {
+      "JMM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1010",
+    "pc_name": "Jharkhand PC-10",
+    "state_code": "S10",
+    "winner_party": "JMM",
+    "vote_share": {
+      "JMM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1011",
+    "pc_name": "Jharkhand PC-11",
+    "state_code": "S10",
+    "winner_party": "JMM",
+    "vote_share": {
+      "JMM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1012",
+    "pc_name": "Jharkhand PC-12",
+    "state_code": "S10",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1013",
+    "pc_name": "Jharkhand PC-13",
+    "state_code": "S10",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1014",
+    "pc_name": "Jharkhand PC-14",
+    "state_code": "S10",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S1201",
+    "pc_name": "Madhya Pradesh PC-1",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1202",
+    "pc_name": "Madhya Pradesh PC-2",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1203",
+    "pc_name": "Madhya Pradesh PC-3",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1204",
+    "pc_name": "Madhya Pradesh PC-4",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1205",
+    "pc_name": "Madhya Pradesh PC-5",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1206",
+    "pc_name": "Madhya Pradesh PC-6",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1207",
+    "pc_name": "Madhya Pradesh PC-7",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1208",
+    "pc_name": "Madhya Pradesh PC-8",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1209",
+    "pc_name": "Madhya Pradesh PC-9",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1210",
+    "pc_name": "Madhya Pradesh PC-10",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1211",
+    "pc_name": "Madhya Pradesh PC-11",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1212",
+    "pc_name": "Madhya Pradesh PC-12",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1213",
+    "pc_name": "Madhya Pradesh PC-13",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1214",
+    "pc_name": "Madhya Pradesh PC-14",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1215",
+    "pc_name": "Madhya Pradesh PC-15",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1216",
+    "pc_name": "Madhya Pradesh PC-16",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1217",
+    "pc_name": "Madhya Pradesh PC-17",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1218",
+    "pc_name": "Madhya Pradesh PC-18",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1219",
+    "pc_name": "Madhya Pradesh PC-19",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1220",
+    "pc_name": "Madhya Pradesh PC-20",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1221",
+    "pc_name": "Madhya Pradesh PC-21",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1222",
+    "pc_name": "Madhya Pradesh PC-22",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1223",
+    "pc_name": "Madhya Pradesh PC-23",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1224",
+    "pc_name": "Madhya Pradesh PC-24",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1225",
+    "pc_name": "Madhya Pradesh PC-25",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1226",
+    "pc_name": "Madhya Pradesh PC-26",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1227",
+    "pc_name": "Madhya Pradesh PC-27",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1228",
+    "pc_name": "Madhya Pradesh PC-28",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1229",
+    "pc_name": "Madhya Pradesh PC-29",
+    "state_code": "S12",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1301",
+    "pc_name": "Maharashtra PC-1",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1302",
+    "pc_name": "Maharashtra PC-2",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1303",
+    "pc_name": "Maharashtra PC-3",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1304",
+    "pc_name": "Maharashtra PC-4",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1305",
+    "pc_name": "Maharashtra PC-5",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1306",
+    "pc_name": "Maharashtra PC-6",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1307",
+    "pc_name": "Maharashtra PC-7",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1308",
+    "pc_name": "Maharashtra PC-8",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1309",
+    "pc_name": "Maharashtra PC-9",
+    "state_code": "S13",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1310",
+    "pc_name": "Maharashtra PC-10",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1311",
+    "pc_name": "Maharashtra PC-11",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1312",
+    "pc_name": "Maharashtra PC-12",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1313",
+    "pc_name": "Maharashtra PC-13",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1314",
+    "pc_name": "Maharashtra PC-14",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1315",
+    "pc_name": "Maharashtra PC-15",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1316",
+    "pc_name": "Maharashtra PC-16",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1317",
+    "pc_name": "Maharashtra PC-17",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1318",
+    "pc_name": "Maharashtra PC-18",
+    "state_code": "S13",
+    "winner_party": "SS(S)",
+    "vote_share": {
+      "SS(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1319",
+    "pc_name": "Maharashtra PC-19",
+    "state_code": "S13",
+    "winner_party": "NCP(AP)",
+    "vote_share": {
+      "NCP(AP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1320",
+    "pc_name": "Maharashtra PC-20",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1321",
+    "pc_name": "Maharashtra PC-21",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1322",
+    "pc_name": "Maharashtra PC-22",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1323",
+    "pc_name": "Maharashtra PC-23",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1324",
+    "pc_name": "Maharashtra PC-24",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1325",
+    "pc_name": "Maharashtra PC-25",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1326",
+    "pc_name": "Maharashtra PC-26",
+    "state_code": "S13",
+    "winner_party": "SS",
+    "vote_share": {
+      "SS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1327",
+    "pc_name": "Maharashtra PC-27",
+    "state_code": "S13",
+    "winner_party": "NCP",
+    "vote_share": {
+      "NCP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1328",
+    "pc_name": "Maharashtra PC-28",
+    "state_code": "S13",
+    "winner_party": "SHS",
+    "vote_share": {
+      "SHS": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1329",
+    "pc_name": "Maharashtra PC-29",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1330",
+    "pc_name": "Maharashtra PC-30",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1331",
+    "pc_name": "Maharashtra PC-31",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1332",
+    "pc_name": "Maharashtra PC-32",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1333",
+    "pc_name": "Maharashtra PC-33",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1334",
+    "pc_name": "Maharashtra PC-34",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1335",
+    "pc_name": "Maharashtra PC-35",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1336",
+    "pc_name": "Maharashtra PC-36",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1337",
+    "pc_name": "Maharashtra PC-37",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1338",
+    "pc_name": "Maharashtra PC-38",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1339",
+    "pc_name": "Maharashtra PC-39",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1340",
+    "pc_name": "Maharashtra PC-40",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1341",
+    "pc_name": "Maharashtra PC-41",
+    "state_code": "S13",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1342",
+    "pc_name": "Maharashtra PC-42",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1343",
+    "pc_name": "Maharashtra PC-43",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1344",
+    "pc_name": "Maharashtra PC-44",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1345",
+    "pc_name": "Maharashtra PC-45",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1346",
+    "pc_name": "Maharashtra PC-46",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1347",
+    "pc_name": "Maharashtra PC-47",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1348",
+    "pc_name": "Maharashtra PC-48",
+    "state_code": "S13",
+    "winner_party": "NCP(SP)",
+    "vote_share": {
+      "NCP(SP)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1401",
+    "pc_name": "Manipur PC-1",
+    "state_code": "S14",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1402",
+    "pc_name": "Manipur PC-2",
+    "state_code": "S14",
+    "winner_party": "NPP",
+    "vote_share": {
+      "NPP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1501",
+    "pc_name": "Meghalaya PC-1",
+    "state_code": "S15",
+    "winner_party": "NPP",
+    "vote_share": {
+      "NPP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1502",
+    "pc_name": "Meghalaya PC-2",
+    "state_code": "S15",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1601",
+    "pc_name": "Mizoram PC-1",
+    "state_code": "S16",
+    "winner_party": "ZPM",
+    "vote_share": {
+      "ZPM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1701",
+    "pc_name": "Nagaland PC-1",
+    "state_code": "S17",
+    "winner_party": "NDPP",
+    "vote_share": {
+      "NDPP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1801",
+    "pc_name": "Odisha PC-1",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1802",
+    "pc_name": "Odisha PC-2",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1803",
+    "pc_name": "Odisha PC-3",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1804",
+    "pc_name": "Odisha PC-4",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1805",
+    "pc_name": "Odisha PC-5",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1806",
+    "pc_name": "Odisha PC-6",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1807",
+    "pc_name": "Odisha PC-7",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1808",
+    "pc_name": "Odisha PC-8",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1809",
+    "pc_name": "Odisha PC-9",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1810",
+    "pc_name": "Odisha PC-10",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1811",
+    "pc_name": "Odisha PC-11",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1812",
+    "pc_name": "Odisha PC-12",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1813",
+    "pc_name": "Odisha PC-13",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1814",
+    "pc_name": "Odisha PC-14",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1815",
+    "pc_name": "Odisha PC-15",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1816",
+    "pc_name": "Odisha PC-16",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1817",
+    "pc_name": "Odisha PC-17",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1818",
+    "pc_name": "Odisha PC-18",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1819",
+    "pc_name": "Odisha PC-19",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1820",
+    "pc_name": "Odisha PC-20",
+    "state_code": "S18",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1821",
+    "pc_name": "Odisha PC-21",
+    "state_code": "S18",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1901",
+    "pc_name": "Punjab PC-1",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1902",
+    "pc_name": "Punjab PC-2",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1903",
+    "pc_name": "Punjab PC-3",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1904",
+    "pc_name": "Punjab PC-4",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1905",
+    "pc_name": "Punjab PC-5",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1906",
+    "pc_name": "Punjab PC-6",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1907",
+    "pc_name": "Punjab PC-7",
+    "state_code": "S19",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1908",
+    "pc_name": "Punjab PC-8",
+    "state_code": "S19",
+    "winner_party": "AAP",
+    "vote_share": {
+      "AAP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1909",
+    "pc_name": "Punjab PC-9",
+    "state_code": "S19",
+    "winner_party": "AAP",
+    "vote_share": {
+      "AAP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1910",
+    "pc_name": "Punjab PC-10",
+    "state_code": "S19",
+    "winner_party": "AAP",
+    "vote_share": {
+      "AAP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1911",
+    "pc_name": "Punjab PC-11",
+    "state_code": "S19",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1912",
+    "pc_name": "Punjab PC-12",
+    "state_code": "S19",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S1913",
+    "pc_name": "Punjab PC-13",
+    "state_code": "S19",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S2001",
+    "pc_name": "Rajasthan PC-1",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2002",
+    "pc_name": "Rajasthan PC-2",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2003",
+    "pc_name": "Rajasthan PC-3",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2004",
+    "pc_name": "Rajasthan PC-4",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2005",
+    "pc_name": "Rajasthan PC-5",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2006",
+    "pc_name": "Rajasthan PC-6",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2007",
+    "pc_name": "Rajasthan PC-7",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2008",
+    "pc_name": "Rajasthan PC-8",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2009",
+    "pc_name": "Rajasthan PC-9",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2010",
+    "pc_name": "Rajasthan PC-10",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2011",
+    "pc_name": "Rajasthan PC-11",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2012",
+    "pc_name": "Rajasthan PC-12",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2013",
+    "pc_name": "Rajasthan PC-13",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2014",
+    "pc_name": "Rajasthan PC-14",
+    "state_code": "S20",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2015",
+    "pc_name": "Rajasthan PC-15",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2016",
+    "pc_name": "Rajasthan PC-16",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2017",
+    "pc_name": "Rajasthan PC-17",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2018",
+    "pc_name": "Rajasthan PC-18",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2019",
+    "pc_name": "Rajasthan PC-19",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2020",
+    "pc_name": "Rajasthan PC-20",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2021",
+    "pc_name": "Rajasthan PC-21",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2022",
+    "pc_name": "Rajasthan PC-22",
+    "state_code": "S20",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2023",
+    "pc_name": "Rajasthan PC-23",
+    "state_code": "S20",
+    "winner_party": "BHARAT ADIVASI PARTY",
+    "vote_share": {
+      "BHARAT ADIVASI PARTY": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2024",
+    "pc_name": "Rajasthan PC-24",
+    "state_code": "S20",
+    "winner_party": "BHARAT ADIVASI PARTY",
+    "vote_share": {
+      "BHARAT ADIVASI PARTY": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2025",
+    "pc_name": "Rajasthan PC-25",
+    "state_code": "S20",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S2101",
+    "pc_name": "Sikkim PC-1",
+    "state_code": "S21",
+    "winner_party": "SKM",
+    "vote_share": {
+      "SKM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2301",
+    "pc_name": "Telangana PC-1",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2302",
+    "pc_name": "Telangana PC-2",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2303",
+    "pc_name": "Telangana PC-3",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2304",
+    "pc_name": "Telangana PC-4",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2305",
+    "pc_name": "Telangana PC-5",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2306",
+    "pc_name": "Telangana PC-6",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2307",
+    "pc_name": "Telangana PC-7",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2308",
+    "pc_name": "Telangana PC-8",
+    "state_code": "S23",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2309",
+    "pc_name": "Telangana PC-9",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2310",
+    "pc_name": "Telangana PC-10",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2311",
+    "pc_name": "Telangana PC-11",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2312",
+    "pc_name": "Telangana PC-12",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2313",
+    "pc_name": "Telangana PC-13",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2314",
+    "pc_name": "Telangana PC-14",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2315",
+    "pc_name": "Telangana PC-15",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2316",
+    "pc_name": "Telangana PC-16",
+    "state_code": "S23",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2317",
+    "pc_name": "Telangana PC-17",
+    "state_code": "S23",
+    "winner_party": "AIMIM",
+    "vote_share": {
+      "AIMIM": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2401",
+    "pc_name": "Tripura PC-1",
+    "state_code": "S24",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2402",
+    "pc_name": "Tripura PC-2",
+    "state_code": "S24",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2701",
+    "pc_name": "Uttar Pradesh PC-1",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2702",
+    "pc_name": "Uttar Pradesh PC-2",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2703",
+    "pc_name": "Uttar Pradesh PC-3",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2704",
+    "pc_name": "Uttar Pradesh PC-4",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2705",
+    "pc_name": "Uttar Pradesh PC-5",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2706",
+    "pc_name": "Uttar Pradesh PC-6",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2707",
+    "pc_name": "Uttar Pradesh PC-7",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2708",
+    "pc_name": "Uttar Pradesh PC-8",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2709",
+    "pc_name": "Uttar Pradesh PC-9",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2710",
+    "pc_name": "Uttar Pradesh PC-10",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2711",
+    "pc_name": "Uttar Pradesh PC-11",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2712",
+    "pc_name": "Uttar Pradesh PC-12",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2713",
+    "pc_name": "Uttar Pradesh PC-13",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2714",
+    "pc_name": "Uttar Pradesh PC-14",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2715",
+    "pc_name": "Uttar Pradesh PC-15",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2716",
+    "pc_name": "Uttar Pradesh PC-16",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2717",
+    "pc_name": "Uttar Pradesh PC-17",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2718",
+    "pc_name": "Uttar Pradesh PC-18",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2719",
+    "pc_name": "Uttar Pradesh PC-19",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2720",
+    "pc_name": "Uttar Pradesh PC-20",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2721",
+    "pc_name": "Uttar Pradesh PC-21",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2722",
+    "pc_name": "Uttar Pradesh PC-22",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2723",
+    "pc_name": "Uttar Pradesh PC-23",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2724",
+    "pc_name": "Uttar Pradesh PC-24",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2725",
+    "pc_name": "Uttar Pradesh PC-25",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2726",
+    "pc_name": "Uttar Pradesh PC-26",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2727",
+    "pc_name": "Uttar Pradesh PC-27",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2728",
+    "pc_name": "Uttar Pradesh PC-28",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2729",
+    "pc_name": "Uttar Pradesh PC-29",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2730",
+    "pc_name": "Uttar Pradesh PC-30",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2731",
+    "pc_name": "Uttar Pradesh PC-31",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2732",
+    "pc_name": "Uttar Pradesh PC-32",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2733",
+    "pc_name": "Uttar Pradesh PC-33",
+    "state_code": "S27",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2734",
+    "pc_name": "Uttar Pradesh PC-34",
+    "state_code": "S27",
+    "winner_party": "RLD",
+    "vote_share": {
+      "RLD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2735",
+    "pc_name": "Uttar Pradesh PC-35",
+    "state_code": "S27",
+    "winner_party": "RLD",
+    "vote_share": {
+      "RLD": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2736",
+    "pc_name": "Uttar Pradesh PC-36",
+    "state_code": "S27",
+    "winner_party": "APNA DAL(S)",
+    "vote_share": {
+      "APNA DAL(S)": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2737",
+    "pc_name": "Uttar Pradesh PC-37",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2738",
+    "pc_name": "Uttar Pradesh PC-38",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2739",
+    "pc_name": "Uttar Pradesh PC-39",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2740",
+    "pc_name": "Uttar Pradesh PC-40",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2741",
+    "pc_name": "Uttar Pradesh PC-41",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2742",
+    "pc_name": "Uttar Pradesh PC-42",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2743",
+    "pc_name": "Uttar Pradesh PC-43",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2744",
+    "pc_name": "Uttar Pradesh PC-44",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2745",
+    "pc_name": "Uttar Pradesh PC-45",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2746",
+    "pc_name": "Uttar Pradesh PC-46",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2747",
+    "pc_name": "Uttar Pradesh PC-47",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2748",
+    "pc_name": "Uttar Pradesh PC-48",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2749",
+    "pc_name": "Uttar Pradesh PC-49",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2750",
+    "pc_name": "Uttar Pradesh PC-50",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2751",
+    "pc_name": "Uttar Pradesh PC-51",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2752",
+    "pc_name": "Uttar Pradesh PC-52",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2753",
+    "pc_name": "Uttar Pradesh PC-53",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2754",
+    "pc_name": "Uttar Pradesh PC-54",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2755",
+    "pc_name": "Uttar Pradesh PC-55",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2756",
+    "pc_name": "Uttar Pradesh PC-56",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2757",
+    "pc_name": "Uttar Pradesh PC-57",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2758",
+    "pc_name": "Uttar Pradesh PC-58",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2759",
+    "pc_name": "Uttar Pradesh PC-59",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2760",
+    "pc_name": "Uttar Pradesh PC-60",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2761",
+    "pc_name": "Uttar Pradesh PC-61",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2762",
+    "pc_name": "Uttar Pradesh PC-62",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2763",
+    "pc_name": "Uttar Pradesh PC-63",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2764",
+    "pc_name": "Uttar Pradesh PC-64",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2765",
+    "pc_name": "Uttar Pradesh PC-65",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2766",
+    "pc_name": "Uttar Pradesh PC-66",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2767",
+    "pc_name": "Uttar Pradesh PC-67",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2768",
+    "pc_name": "Uttar Pradesh PC-68",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2769",
+    "pc_name": "Uttar Pradesh PC-69",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2770",
+    "pc_name": "Uttar Pradesh PC-70",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2771",
+    "pc_name": "Uttar Pradesh PC-71",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2772",
+    "pc_name": "Uttar Pradesh PC-72",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2773",
+    "pc_name": "Uttar Pradesh PC-73",
+    "state_code": "S27",
+    "winner_party": "SP",
+    "vote_share": {
+      "SP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2774",
+    "pc_name": "Uttar Pradesh PC-74",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2775",
+    "pc_name": "Uttar Pradesh PC-75",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2776",
+    "pc_name": "Uttar Pradesh PC-76",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2777",
+    "pc_name": "Uttar Pradesh PC-77",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2778",
+    "pc_name": "Uttar Pradesh PC-78",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2779",
+    "pc_name": "Uttar Pradesh PC-79",
+    "state_code": "S27",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2780",
+    "pc_name": "Uttar Pradesh PC-80",
+    "state_code": "S27",
+    "winner_party": "others",
+    "vote_share": {
+      "others": 25.0,
+      "BJP": 30.0
+    }
+  },
+  {
+    "pc_id": "S2801",
+    "pc_name": "Uttarakhand PC-1",
+    "state_code": "S28",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2802",
+    "pc_name": "Uttarakhand PC-2",
+    "state_code": "S28",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2803",
+    "pc_name": "Uttarakhand PC-3",
+    "state_code": "S28",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2804",
+    "pc_name": "Uttarakhand PC-4",
+    "state_code": "S28",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2805",
+    "pc_name": "Uttarakhand PC-5",
+    "state_code": "S28",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2901",
+    "pc_name": "Delhi PC-1",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2902",
+    "pc_name": "Delhi PC-2",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2903",
+    "pc_name": "Delhi PC-3",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2904",
+    "pc_name": "Delhi PC-4",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2905",
+    "pc_name": "Delhi PC-5",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2906",
+    "pc_name": "Delhi PC-6",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S2907",
+    "pc_name": "Delhi PC-7",
+    "state_code": "S29",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3001",
+    "pc_name": "Jammu & Kashmir PC-1",
+    "state_code": "S30",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3002",
+    "pc_name": "Jammu & Kashmir PC-2",
+    "state_code": "S30",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3003",
+    "pc_name": "Jammu & Kashmir PC-3",
+    "state_code": "S30",
+    "winner_party": "NC",
+    "vote_share": {
+      "NC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3004",
+    "pc_name": "Jammu & Kashmir PC-4",
+    "state_code": "S30",
+    "winner_party": "NC",
+    "vote_share": {
+      "NC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3005",
+    "pc_name": "Jammu & Kashmir PC-5",
+    "state_code": "S30",
+    "winner_party": "IND",
+    "vote_share": {
+      "IND": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3101",
+    "pc_name": "Ladakh PC-1",
+    "state_code": "S31",
+    "winner_party": "IND",
+    "vote_share": {
+      "IND": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3201",
+    "pc_name": "Chandigarh PC-1",
+    "state_code": "S32",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3301",
+    "pc_name": "Lakshadweep PC-1",
+    "state_code": "S33",
+    "winner_party": "NCP",
+    "vote_share": {
+      "NCP": 45.0,
+      "BJP": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3401",
+    "pc_name": "Andaman & Nicobar PC-1",
+    "state_code": "S34",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3501",
+    "pc_name": "Dadra & Nagar Haveli PC-1",
+    "state_code": "S35",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "S3601",
+    "pc_name": "Daman & Diu PC-1",
+    "state_code": "S36",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 45.0,
+      "INC": 30.0,
+      "others": 25.0
+    }
+  },
+  {
+    "pc_id": "KA01",
+    "pc_name": "Chikkodi",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 44.2,
+      "BJP": 36.8,
+      "JD(S)": 10.4,
+      "others": 8.6
+    }
+  },
+  {
+    "pc_id": "KA02",
+    "pc_name": "Belgaum",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 44.6,
+      "INC": 38.4,
+      "JD(S)": 8.2,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA03",
+    "pc_name": "Bagalkot",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.4,
+      "INC": 36.2,
+      "JD(S)": 8.6,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA04",
+    "pc_name": "Bijapur (SC)",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 50.2,
+      "INC": 32.4,
+      "JD(S)": 8.6,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA05",
+    "pc_name": "Gulbarga",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 46.2,
+      "BJP": 34.4,
+      "JD(S)": 10.4,
+      "others": 9.0
+    }
+  },
+  {
+    "pc_id": "KA06",
+    "pc_name": "Raichur (SC)",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 44.8,
+      "BJP": 32.6,
+      "JD(S)": 10.4,
+      "others": 12.2
+    }
+  },
+  {
+    "pc_id": "KA07",
+    "pc_name": "Bidar",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 46.4,
+      "BJP": 36.2,
+      "JD(S)": 8.6,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA08",
+    "pc_name": "Koppal",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.2,
+      "INC": 36.4,
+      "JD(S)": 8.4,
+      "others": 9.0
+    }
+  },
+  {
+    "pc_id": "KA09",
+    "pc_name": "Bellary",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.8,
+      "INC": 34.4,
+      "JD(S)": 8.4,
+      "others": 10.4
+    }
+  },
+  {
+    "pc_id": "KA10",
+    "pc_name": "Haveri",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 52.4,
+      "INC": 32.4,
+      "JD(S)": 8.2,
+      "others": 7.0
+    }
+  },
+  {
+    "pc_id": "KA11",
+    "pc_name": "Dharwad",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 52.8,
+      "INC": 32.4,
+      "JD(S)": 6.4,
+      "others": 8.4
+    }
+  },
+  {
+    "pc_id": "KA12",
+    "pc_name": "Uttara Kannada (ST)",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 48.4,
+      "INC": 34.4,
+      "JD(S)": 8.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA13",
+    "pc_name": "Davanagere",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 46.4,
+      "INC": 34.4,
+      "JD(S)": 10.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA14",
+    "pc_name": "Shimoga",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 56.4,
+      "INC": 28.4,
+      "JD(S)": 6.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA15",
+    "pc_name": "Udupi Chikmagalur",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 54.4,
+      "INC": 30.4,
+      "JD(S)": 6.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA16",
+    "pc_name": "Hassan",
+    "state_code": "S_KA",
+    "winner_party": "JD(S)",
+    "vote_share": {
+      "JD(S)": 44.4,
+      "INC": 28.4,
+      "BJP": 20.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA17",
+    "pc_name": "Dakshina Kannada",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 60.4,
+      "INC": 28.4,
+      "JD(S)": 4.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA18",
+    "pc_name": "Chitradurga (SC)",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 44.4,
+      "BJP": 36.4,
+      "JD(S)": 10.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA19",
+    "pc_name": "Tumkur",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 44.4,
+      "INC": 28.4,
+      "JD(S)": 20.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA20",
+    "pc_name": "Mandya",
+    "state_code": "S_KA",
+    "winner_party": "JD(S)",
+    "vote_share": {
+      "JD(S)": 48.4,
+      "INC": 28.4,
+      "BJP": 16.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA21",
+    "pc_name": "Mysore",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 46.4,
+      "BJP": 36.4,
+      "JD(S)": 10.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA22",
+    "pc_name": "Chamarajanagar (SC)",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 48.4,
+      "BJP": 32.4,
+      "JD(S)": 10.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA23",
+    "pc_name": "Chikkballapur",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 42.4,
+      "BJP": 32.4,
+      "JD(S)": 18.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA24",
+    "pc_name": "Kolar (SC)",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 48.4,
+      "BJP": 30.4,
+      "JD(S)": 12.4,
+      "others": 8.8
+    }
+  },
+  {
+    "pc_id": "KA25",
+    "pc_name": "Bangalore Rural",
+    "state_code": "S_KA",
+    "winner_party": "INC",
+    "vote_share": {
+      "INC": 44.4,
+      "BJP": 36.4,
+      "JD(S)": 12.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA26",
+    "pc_name": "Bangalore North",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 56.4,
+      "INC": 32.4,
+      "JD(S)": 4.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA27",
+    "pc_name": "Bangalore Central",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 54.4,
+      "INC": 34.4,
+      "JD(S)": 4.4,
+      "others": 6.8
+    }
+  },
+  {
+    "pc_id": "KA28",
+    "pc_name": "Bangalore South",
+    "state_code": "S_KA",
+    "winner_party": "BJP",
+    "vote_share": {
+      "BJP": 58.4,
+      "INC": 30.4,
+      "JD(S)": 4.4,
+      "others": 6.8
+    }
+  }
+]

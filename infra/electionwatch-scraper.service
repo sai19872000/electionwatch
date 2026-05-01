@@ -5,19 +5,30 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=%h/factory/services/electionwatch_scraper
-ExecStart=/usr/bin/python3 %h/factory/services/electionwatch_scraper/scraper.py
+WorkingDirectory=%h/electionwatch/scraper
+ExecStart=/usr/bin/python3 -u %h/electionwatch/scraper/scraper.py
 Restart=on-failure
 RestartSec=5s
 
-# Load R2 keys and ECI config — gitignored
+# Fail loud if env file is missing or world-readable. Per QA P1-9 (iter-1):
+# the env file holds R2 keys; service must not silently start with bad/missing
+# secrets. ExecStartPre exits non-zero, systemd refuses to start ExecStart.
+#  - test -r → file exists and is readable by the service user
+#  - stat -c %a → octal mode; require 600 (no group/other access)
+ExecStartPre=/usr/bin/test -r %h/factory/.env.electionwatch
+ExecStartPre=/bin/sh -c 'mode=$(stat -c %%a %h/factory/.env.electionwatch); test "$mode" = "600" || { echo "electionwatch-scraper: env file mode $mode (expected 600)"; exit 1; }'
+
+# Load R2 keys and ECI config — gitignored. Required mode: 600 (see above
+# ExecStartPre). Apply once on the host:
+#   chmod 600 ~/factory/.env.electionwatch
 EnvironmentFile=%h/factory/.env.electionwatch
 
-# Resource limits: scraper does ~6 GETs/30s; 50 MB RAM ceiling is generous
+# Resource limits: scraper does ~6 GETs/30s; 150 MB RAM ceiling is generous
 MemoryMax=150M
 CPUQuota=20%
 
 # Stdout/stderr → journald with identifier (journalctl -u electionwatch-scraper)
+# scraper.py also writes to ~/factory/logs/electionwatch_scraper.log for cross-project tail
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=electionwatch-scraper

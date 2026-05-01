@@ -5,16 +5,33 @@ ElectionWatch scraper — Python 3.11, home server.
 30s loop, 5 concurrent state fetches + 1 partywise summary (asyncio + httpx).
 Parses ECI HTML tables (BeautifulSoup / lxml).
 
-Shape B selected: no per-state CEO parsers. On ≥2 consecutive ECI failures
-the site-wide snapshot.json flips stale:true (uniform banner). Honest > inconsistent.
+Primary data source: ECI portal (results.eci.gov.in).
+Fallback: per-state CEO portals (NIC infra) on 503/timeout — configure via
+CEO_BASE_<code> env vars before counting day.
+
+Snapshot schema v1:
+  {
+    version: 1,
+    as_of, scraper_run_id,
+    states: [{code, name, total_ac, declared, leading:{party:count}}],
+    national: {declared, leading:{party:count}, vote_share:{party:pct}},
+    data_source, stale
+  }
 
 Required env vars (load from ~/factory/.env.electionwatch via systemd EnvironmentFile):
   ECI_BASE_PATH          e.g. AcResultGenMay2026 (no trailing slash)
-  R2_ACCOUNT_ID
+  R2_ENDPOINT            e.g. https://<account_id>.r2.cloudflarestorage.com
   R2_BUCKET              default: ew-snapshots
   R2_ACCESS_KEY_ID
-  R2_SECRET
+  R2_SECRET_ACCESS_KEY
   TG_CHAT_ID             Telegram chat id for p0 alerts
+
+Optional (CEO fallback, configure before counting day):
+  CEO_BASE_S03           Assam CEO portal base   e.g. https://ceoassam.nic.in/AcResultGenMay2026
+  CEO_BASE_S11           Kerala CEO portal base
+  CEO_BASE_S22           Tamil Nadu CEO portal base
+  CEO_BASE_S25           West Bengal CEO portal base
+  CEO_BASE_U06           Puducherry CEO portal base
 """
 
 from __future__ import annotations
@@ -42,13 +59,26 @@ from bs4 import BeautifulSoup
 FACTORY_DIR = Path.home() / "factory"
 ECI_BASE = os.getenv("ECI_BASE_PATH", "")
 ECI_HOST = "https://results.eci.gov.in"
-R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID", "")
+
+R2_ENDPOINT = os.getenv("R2_ENDPOINT", "")
 R2_BUCKET = os.getenv("R2_BUCKET", "ew-snapshots")
 R2_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID", "")
-R2_SECRET = os.getenv("R2_SECRET", "")
+R2_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY", "")
+
 TG_CHAT_ID = os.getenv("TG_CHAT_ID", "")
 TG_SEND = str(FACTORY_DIR / "scripts" / "tg_send.sh")
 
+# Per-state CEO portal base paths (NIC infra fallback on ECI 503/timeout).
+# Uses the same ConstituencywiseResult-<code>.htm URL path structure as ECI.
+CEO_BASES: dict[str, str] = {
+    "S03": os.getenv("CEO_BASE_S03", ""),
+    "S11": os.getenv("CEO_BASE_S11", ""),
+    "S22": os.getenv("CEO_BASE_S22", ""),
+    "S25": os.getenv("CEO_BASE_S25", ""),
+    "U06": os.getenv("CEO_BASE_U06", ""),
+}
+
+SNAPSHOT_VERSION = 1
 LOOP_INTERVAL_S = 30
 WATCHDOG_TIMEOUT_S = 90
 STALE_FAILURES_THRESHOLD = 2
@@ -107,7 +137,7 @@ class ParseDriftError(Exception):
 
 
 # ---------------------------------------------------------------------------
-# ECI URL helpers
+# ECI + CEO URL helpers
 # ---------------------------------------------------------------------------
 def eci_url(path: str) -> str:
     return f"{ECI_HOST}/{ECI_BASE}/{path}"
@@ -117,8 +147,16 @@ def state_page_url(code: str) -> str:
     return eci_url(f"ConstituencywiseResult-{code}.htm")
 
 
+def ceo_state_page_url(code: str) -> str | None:
+    """Returns CEO portal URL for a state, or None if not configured."""
+    base = CEO_BASES.get(code, "").rstrip("/")
+    if not base:
+        return None
+    return f"{base}/ConstituencywiseResult-{code}.htm"
+
+
 def partywise_url(code: str = "S22") -> str:
-    """Single partywise page; used as a 'heartbeat' fetch for the watchdog."""
+    """Single partywise page; used for national tally."""
     return eci_url(f"PartywiseResult-{code}.htm")
 
 
@@ -143,7 +181,6 @@ def _find_results_table(soup: BeautifulSoup) -> Any | None:
     best_rows = 0
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
-        # Must have numeric content in first cell of some row (AC no.)
         data_rows = 0
         for row in rows[1:]:
             cells = row.find_all("td")
@@ -268,14 +305,91 @@ def parse_constituency_page(html: str, state_code: str) -> list[dict]:
     return constituencies
 
 
+def parse_partywise_page(html: str, state_code: str) -> tuple[dict[str, int], dict[str, float]]:
+    """
+    Parse PartywiseResult-SXXX.htm.
+    Returns:
+      seats_tally:  {party_abbr: seats_total (won+leading)}
+      vote_share:   {party_abbr: vote_pct}  — empty dict if vote columns not found
+    """
+    soup = BeautifulSoup(html, "lxml")
+    seats_tally: dict[str, int] = {}
+    votes_raw: dict[str, int] = {}
+
+    for table in soup.find_all("table"):
+        rows = table.find_all("tr")
+        if len(rows) < 3:
+            continue
+        # Detect header columns
+        won_idx = lead_idx = party_idx = votes_idx = None
+        header_cells = rows[0].find_all(["td", "th"])
+        for i, c in enumerate(header_cells):
+            t = c.get_text(strip=True).lower()
+            if "party" in t or "abbr" in t:
+                party_idx = i
+            elif "won" in t:
+                won_idx = i
+            elif "lead" in t:
+                lead_idx = i
+            elif "vote" in t and ("total" in t or "polled" in t or "count" in t):
+                votes_idx = i
+
+        if party_idx is None:
+            continue
+
+        for row in rows[1:]:
+            cells = row.find_all("td")
+            if not cells or party_idx >= len(cells):
+                continue
+            party = cells[party_idx].get_text(strip=True)
+            if not party or party.lower() in {"total", "grand total", "others"}:
+                continue
+            won = 0
+            lead = 0
+            votes = 0
+            if won_idx is not None and won_idx < len(cells):
+                try:
+                    won = int(cells[won_idx].get_text(strip=True).replace(",", "") or 0)
+                except ValueError:
+                    pass
+            if lead_idx is not None and lead_idx < len(cells):
+                try:
+                    lead = int(cells[lead_idx].get_text(strip=True).replace(",", "") or 0)
+                except ValueError:
+                    pass
+            if votes_idx is not None and votes_idx < len(cells):
+                try:
+                    votes = int(cells[votes_idx].get_text(strip=True).replace(",", "") or 0)
+                except ValueError:
+                    pass
+            total_seats = won + lead
+            if total_seats > 0:
+                seats_tally[party] = seats_tally.get(party, 0) + total_seats
+            if votes > 0:
+                votes_raw[party] = votes_raw.get(party, 0) + votes
+
+        if seats_tally:
+            break  # found the results table
+
+    # Compute vote_share if votes available
+    vote_share: dict[str, float] = {}
+    total_votes = sum(votes_raw.values())
+    if total_votes > 0:
+        vote_share = {
+            party: round(v / total_votes * 100, 2)
+            for party, v in votes_raw.items()
+        }
+
+    return seats_tally, vote_share
+
+
 def parse_statewise_page(html: str) -> dict[str, dict]:
     """
     Parse Statewise.htm → {state_code: {leading: {PARTY: N}, declared: N}}
-    Best-effort; used by watchdog only.
+    Best-effort; used for watchdog validation only.
     """
     soup = BeautifulSoup(html, "lxml")
     results: dict[str, dict] = {}
-    # Partywise pages have tables with party-name / seats-won / seats-leading columns
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
         if len(rows) < 3:
@@ -284,11 +398,9 @@ def parse_statewise_page(html: str) -> dict[str, dict]:
             cells = row.find_all("td")
             if len(cells) < 3:
                 continue
-            # We're looking for state name rows
             text = cells[0].get_text(strip=True)
             for code, cfg in STATE_CONFIGS.items():
                 if cfg["name"].lower() in text.lower():
-                    # Try to extract total won + leading
                     def safe_int(idx: int) -> int:
                         if idx >= len(cells):
                             return 0
@@ -301,58 +413,9 @@ def parse_statewise_page(html: str) -> dict[str, dict]:
     return results
 
 
-def parse_partywise_page(html: str, state_code: str) -> dict[str, int]:
-    """
-    Parse PartywiseResult-SXXX.htm → {party_abbr: seats_total (won+leading)}
-    """
-    soup = BeautifulSoup(html, "lxml")
-    tally: dict[str, int] = {}
-    for table in soup.find_all("table"):
-        rows = table.find_all("tr")
-        if len(rows) < 3:
-            continue
-        # Detect header: look for won / leading columns
-        won_idx = lead_idx = party_idx = None
-        header_cells = rows[0].find_all(["td", "th"])
-        for i, c in enumerate(header_cells):
-            t = c.get_text(strip=True).lower()
-            if "party" in t or "abbr" in t:
-                party_idx = i
-            elif "won" in t:
-                won_idx = i
-            elif "lead" in t:
-                lead_idx = i
-        if party_idx is None:
-            continue
-        for row in rows[1:]:
-            cells = row.find_all("td")
-            if not cells or party_idx >= len(cells):
-                continue
-            party = cells[party_idx].get_text(strip=True)
-            if not party or party.lower() in {"total", "grand total", "others"}:
-                continue
-            won = 0
-            lead = 0
-            if won_idx is not None and won_idx < len(cells):
-                try:
-                    won = int(cells[won_idx].get_text(strip=True).replace(",", "") or 0)
-                except ValueError:
-                    pass
-            if lead_idx is not None and lead_idx < len(cells):
-                try:
-                    lead = int(cells[lead_idx].get_text(strip=True).replace(",", "") or 0)
-                except ValueError:
-                    pass
-            total = won + lead
-            if total > 0:
-                tally[party] = tally.get(party, 0) + total
-        if tally:
-            break  # found the results table
-    return tally
-
-
 # ---------------------------------------------------------------------------
-# Alliance rollup
+# Alliance rollup (utility — frontend computes this client-side, kept here
+# for internal diagnostics / Telegram alert context)
 # ---------------------------------------------------------------------------
 def roll_up_alliances(party_tally: dict[str, int]) -> dict[str, int]:
     result: dict[str, int] = {"INDIA": 0, "NDA": 0, "OTH": 0}
@@ -363,39 +426,34 @@ def roll_up_alliances(party_tally: dict[str, int]) -> dict[str, int]:
 
 
 # ---------------------------------------------------------------------------
-# R2 upload
+# R2 upload (atomic: write .tmp → copy → delete .tmp)
 # ---------------------------------------------------------------------------
 def _make_r2_client() -> Any:
     return boto3.client(
         "s3",
-        endpoint_url=f"https://{R2_ACCOUNT_ID}.r2.cloudflarestorage.com",
+        endpoint_url=R2_ENDPOINT,
         aws_access_key_id=R2_ACCESS_KEY_ID,
-        aws_secret_access_key=R2_SECRET,
+        aws_secret_access_key=R2_SECRET_ACCESS_KEY,
         region_name="auto",
     )
 
 
 def _upload_sync(key: str, payload: bytes) -> None:
-    """Atomic upload: write .tmp key → copy → delete .tmp."""
+    """Atomic upload: write .tmp key → copy to final key → delete .tmp."""
     client = _make_r2_client()
     tmp_key = f".tmp/{key}"
-    put_kwargs: dict = {
-        "Bucket": R2_BUCKET,
-        "Key": tmp_key,
-        "Body": payload,
+    common: dict = {
         "ContentType": "application/json",
         "ContentEncoding": "gzip",
         "CacheControl": "public, max-age=15, s-maxage=15",
     }
-    client.put_object(**put_kwargs)
+    client.put_object(Bucket=R2_BUCKET, Key=tmp_key, Body=payload, **common)
     client.copy_object(
         Bucket=R2_BUCKET,
         CopySource={"Bucket": R2_BUCKET, "Key": tmp_key},
         Key=key,
-        ContentType="application/json",
-        ContentEncoding="gzip",
-        CacheControl="public, max-age=15, s-maxage=15",
         MetadataDirective="REPLACE",
+        **common,
     )
     client.delete_object(Bucket=R2_BUCKET, Key=tmp_key)
 
@@ -536,13 +594,27 @@ class ElectionScraper:
         if not ECI_BASE:
             log.error("ECI_BASE_PATH env var not set — run smoke_probe.py first")
             sys.exit(1)
+        if not R2_ENDPOINT:
+            log.error("R2_ENDPOINT env var not set — cannot upload to R2")
+            sys.exit(1)
+        if not R2_ACCESS_KEY_ID or not R2_SECRET_ACCESS_KEY:
+            log.error("R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY not set")
+            sys.exit(1)
 
         # Restore crash state
         self.disk_state = load_disk_state()
         self.prev_constituencies = self.disk_state.get("prev_constituencies", {})
         self.events = self.disk_state.get("events", [])[-MAX_EVENTS:]
 
-        log.info("scraper starting ECI_BASE_PATH=%s R2_BUCKET=%s", ECI_BASE, R2_BUCKET)
+        log.info(
+            "scraper starting ECI_BASE_PATH=%s R2_BUCKET=%s R2_ENDPOINT=%s",
+            ECI_BASE, R2_BUCKET, R2_ENDPOINT,
+        )
+        ceo_configured = [code for code, base in CEO_BASES.items() if base]
+        if ceo_configured:
+            log.info("CEO fallback configured for states: %s", ceo_configured)
+        else:
+            log.warning("No CEO fallback URLs configured (CEO_BASE_* env vars not set)")
 
         # Run watchdog check as a background task
         asyncio.create_task(self._watchdog_task())
@@ -574,11 +646,37 @@ class ElectionScraper:
                 elif age <= WATCHDOG_TIMEOUT_S:
                     self._watchdog_alerted = False
 
+    async def _try_ceo_fallback(
+        self,
+        client: httpx.AsyncClient,
+        code: str,
+    ) -> str | None:
+        """
+        Attempt CEO portal fetch for a state. Returns HTML or None if not
+        configured / fails.
+        """
+        url = ceo_state_page_url(code)
+        if not url:
+            log.debug("CEO fallback not configured for state=%s", code)
+            return None
+        log.info("CEO fallback attempt state=%s url=%s", code, url)
+        try:
+            resp = await client.get(url, follow_redirects=True, timeout=HTTP_TIMEOUT)
+            resp.raise_for_status()
+            log.info("CEO fallback OK state=%s status=%d", code, resp.status_code)
+            return resp.text
+        except Exception as exc:
+            log.warning("CEO fallback failed state=%s err=%s", code, exc)
+            return None
+
     async def _cycle(self) -> None:
         now_ist = self._now_ist()
         run_id = self._scraper_run_id()
 
-        async with httpx.AsyncClient(timeout=HTTP_TIMEOUT, headers={"User-Agent": "ElectionWatch/1.0"}) as client:
+        async with httpx.AsyncClient(
+            timeout=HTTP_TIMEOUT,
+            headers={"User-Agent": "ElectionWatch/1.0"},
+        ) as client:
             # Fan out 5 state fetches + 1 partywise concurrently
             state_tasks = {
                 code: asyncio.create_task(
@@ -590,18 +688,28 @@ class ElectionScraper:
                 fetch_with_backoff(client, partywise_url())
             )
 
-            # Collect results; track per-state failures
+            # Collect results; apply CEO fallback on 503/timeout
             state_htmls: dict[str, str | None] = {}
+            state_sources: dict[str, str] = {}  # per-state data_source
             any_success = False
+
             for code, task in state_tasks.items():
                 try:
                     resp = await task
                     resp.raise_for_status()
                     state_htmls[code] = resp.text
+                    state_sources[code] = "eci_primary"
                     any_success = True
-                except Exception as exc:
-                    log.error("fetch failed state=%s err=%s", code, exc)
-                    state_htmls[code] = None
+                except (httpx.HTTPStatusError, httpx.TransportError, asyncio.TimeoutError) as exc:
+                    log.error("ECI fetch failed state=%s err=%s — trying CEO fallback", code, exc)
+                    fallback_html = await self._try_ceo_fallback(client, code)
+                    if fallback_html:
+                        state_htmls[code] = fallback_html
+                        state_sources[code] = "ceo_fallback"
+                        any_success = True
+                    else:
+                        state_htmls[code] = None
+                        state_sources[code] = "eci_primary"  # failed, will use last-known
 
             try:
                 pw_resp = await partywise_task
@@ -617,6 +725,12 @@ class ElectionScraper:
             self.consecutive_failures = 0
 
         stale = self.consecutive_failures >= STALE_FAILURES_THRESHOLD
+
+        # Determine overall data_source
+        if any(s == "ceo_fallback" for s in state_sources.values()):
+            overall_source = "ceo_fallback"
+        else:
+            overall_source = "eci_primary"
 
         # Parse state pages
         new_constituencies: dict[str, list[dict]] = {}
@@ -658,40 +772,51 @@ class ElectionScraper:
             state_leading[code] = leading
             state_declared[code] = declared
 
-        # Partywise page → national alliance view
-        national_view: dict[str, int] = {"INDIA": 0, "NDA": 0, "OTH": 0}
+        # Partywise page → national party tally + vote_share
+        national_party_tally: dict[str, int] = {}
+        national_vote_share: dict[str, float] = {}
+
         if partywise_html:
             try:
-                pw_tally = parse_partywise_page(partywise_html, "S22")
-                national_view = roll_up_alliances(pw_tally)
+                seats, votes = parse_partywise_page(partywise_html, "S22")
+                national_party_tally = seats
+                national_vote_share = votes
             except Exception as exc:
                 log.warning("partywise parse failed: %s", exc)
 
         # If partywise empty, roll up from state tallies
-        if sum(national_view.values()) == 0:
+        if sum(national_party_tally.values()) == 0:
             combined: dict[str, int] = {}
             for tally in state_leading.values():
                 for party, n in tally.items():
                     combined[party] = combined.get(party, 0) + n
-            national_view = roll_up_alliances(combined)
+            national_party_tally = combined
+
+        total_national_declared = sum(state_declared.values())
 
         # ---------------------------------------------------------------
-        # Build snapshot.json
+        # Build snapshot.json (schema v1)
         # ---------------------------------------------------------------
         snapshot: dict = {
+            "version": SNAPSHOT_VERSION,
             "as_of": now_ist,
             "scraper_run_id": run_id,
-            "states": {
-                code: {
+            "states": [
+                {
+                    "code": code,
                     "name": cfg["name"],
-                    "total_seats": cfg["total_seats"],
-                    "leading": state_leading.get(code, {}),
+                    "total_ac": cfg["total_seats"],
                     "declared": state_declared.get(code, 0),
+                    "leading": state_leading.get(code, {}),
                 }
                 for code, cfg in STATE_CONFIGS.items()
+            ],
+            "national": {
+                "declared": total_national_declared,
+                "leading": national_party_tally,
+                "vote_share": national_vote_share,
             },
-            "national_alliance_view": national_view,
-            "data_source": "eci_primary",
+            "data_source": overall_source,
             "stale": stale,
         }
 
@@ -708,18 +833,18 @@ class ElectionScraper:
         events_payload = {"events": self.events}
 
         # ---------------------------------------------------------------
-        # Upload to R2
+        # Upload to R2 (all three keys every cycle)
         # ---------------------------------------------------------------
         upload_errors: list[str] = []
         try:
-            await upload_json("snapshot.json", snapshot)
+            await upload_json("live/snapshot.json", snapshot)
             for code, sf in state_files.items():
-                await upload_json(f"state_{code}.json", sf)
-            await upload_json("events.json", events_payload)
+                await upload_json(f"live/state_{code}.json", sf)
+            await upload_json("live/events.json", events_payload)
 
             self.last_push_ts = time.time()
             self.consecutive_failures = max(0, self.consecutive_failures - 1)
-            log.info("cycle OK run_id=%s stale=%s", run_id, stale)
+            log.info("cycle OK run_id=%s stale=%s source=%s", run_id, stale, overall_source)
         except Exception as exc:
             log.error("r2 upload failed: %s", exc)
             upload_errors.append(str(exc))

@@ -4,26 +4,31 @@
  * Purpose:
  *   If the home-server scraper hasn't pushed a fresh snapshot.json in >90s,
  *   this worker runs a minimal ECI fetch (1 GET to Statewise.htm), builds a
- *   degraded snapshot, and writes it to R2. Frontend reads stale:true and
- *   shows the "Limited data — primary scraper recovering" banner.
+ *   degraded snapshot (schema v1), and writes it to R2. Frontend reads
+ *   stale:true and shows the "Limited data — primary scraper recovering" banner.
  *
  * R2 binding: EW_SNAPSHOTS (bucket: ew-snapshots, public-read)
  * Env vars (set via `wrangler secret put`):
  *   ECI_BASE_PATH     — e.g. AcResultGenMay2026
  *   TG_BOT_TOKEN      — optional, for watchdog p0 alert
  *   TG_CHAT_ID        — optional
+ *
+ * Snapshot schema v1 (mirrors scraper.py):
+ *   { version, as_of, scraper_run_id, states:[{code,name,total_ac,declared,leading}],
+ *     national:{declared,leading,vote_share}, data_source, stale }
  */
 
 const WATCHDOG_STALE_MS = 90_000;         // 90 seconds
 const ECI_HOST = "https://results.eci.gov.in";
 const CACHE_CONTROL = "public, max-age=15, s-maxage=15";
+const SNAPSHOT_VERSION = 1;
 
 const STATE_CONFIGS = {
-  S03: { name: "Assam",       total_seats: 126 },
-  S11: { name: "Kerala",      total_seats: 140 },
-  S22: { name: "Tamil Nadu",  total_seats: 234 },
-  S25: { name: "West Bengal", total_seats: 294 },
-  U06: { name: "Puducherry",  total_seats: 30  },
+  S03: { name: "Assam",       total_ac: 126 },
+  S11: { name: "Kerala",      total_ac: 140 },
+  S22: { name: "Tamil Nadu",  total_ac: 234 },
+  S25: { name: "West Bengal", total_ac: 294 },
+  U06: { name: "Puducherry",  total_ac: 30  },
 };
 
 // ---------------------------------------------------------------------------
@@ -42,8 +47,8 @@ async function runWatchdog(env) {
     return;
   }
 
-  // 1. HEAD-check snapshot.json Last-Modified
-  const snapshotMeta = await env.EW_SNAPSHOTS.head("snapshot.json");
+  // 1. HEAD-check live/snapshot.json Last-Modified
+  const snapshotMeta = await env.EW_SNAPSHOTS.head("live/snapshot.json");
   if (snapshotMeta) {
     const ageMs = Date.now() - snapshotMeta.uploaded.getTime();
     if (ageMs < WATCHDOG_STALE_MS) {
@@ -52,16 +57,15 @@ async function runWatchdog(env) {
     }
     console.warn(`[watchdog] snapshot STALE (${Math.round(ageMs / 1000)}s old) — running minimal scraper`);
   } else {
-    console.warn("[watchdog] snapshot.json not found in R2 — running minimal scraper");
+    console.warn("[watchdog] live/snapshot.json not found in R2 — running minimal scraper");
   }
 
-  // 2. Load existing snapshot for baseline (so we don't lose last-known state data)
+  // 2. Load existing snapshot for baseline (preserve last-known state data)
   let existingSnapshot = null;
   try {
-    const obj = await env.EW_SNAPSHOTS.get("snapshot.json");
+    const obj = await env.EW_SNAPSHOTS.get("live/snapshot.json");
     if (obj) {
       const raw = await obj.text();
-      // R2 stores gzip-encoded; Worker runtime auto-decompresses on get()
       existingSnapshot = JSON.parse(raw);
     }
   } catch (e) {
@@ -87,36 +91,62 @@ async function runWatchdog(env) {
     console.warn("[watchdog] statewise fetch failed:", e.message);
   }
 
-  // 4. Build degraded snapshot
+  // 4. Build degraded snapshot (schema v1)
   const nowIst = toIst(new Date());
-  const degradedStates = {};
 
-  for (const [code, cfg] of Object.entries(STATE_CONFIGS)) {
-    // Prefer fresh tally; fall back to last-known
-    const freshTally = freshStateTallies[code];
-    const existing = existingSnapshot?.states?.[code];
-
-    degradedStates[code] = {
-      name: cfg.name,
-      total_seats: cfg.total_seats,
-      leading: freshTally?.leading ?? existing?.leading ?? {},
-      declared: freshTally?.declared ?? existing?.declared ?? 0,
-    };
+  // Build states array (schema v1 uses array not object)
+  const existingStateMap = {};
+  if (existingSnapshot?.states) {
+    // Support both old object format and new array format from existing snapshot
+    if (Array.isArray(existingSnapshot.states)) {
+      for (const s of existingSnapshot.states) {
+        existingStateMap[s.code] = s;
+      }
+    } else {
+      // Legacy object format (prior run)
+      for (const [code, s] of Object.entries(existingSnapshot.states)) {
+        existingStateMap[code] = s;
+      }
+    }
   }
 
+  const degradedStates = [];
+  for (const [code, cfg] of Object.entries(STATE_CONFIGS)) {
+    const freshTally = freshStateTallies[code];
+    const existing = existingStateMap[code];
+
+    degradedStates.push({
+      code,
+      name: cfg.name,
+      total_ac: cfg.total_ac,
+      declared: freshTally?.declared ?? existing?.declared ?? 0,
+      leading: freshTally?.leading ?? existing?.leading ?? {},
+    });
+  }
+
+  // Build national from existing or zero
+  const existingNational = existingSnapshot?.national ?? existingSnapshot?.national_alliance_view;
+  const degradedNational = {
+    declared: degradedStates.reduce((s, st) => s + (st.declared || 0), 0),
+    leading: existingNational?.leading ?? {},
+    vote_share: existingNational?.vote_share ?? {},
+  };
+
   const degraded = {
+    version: SNAPSHOT_VERSION,
     as_of: nowIst,
     scraper_run_id: `watchdog_${formatRunId(new Date())}`,
     states: degradedStates,
-    national_alliance_view: existingSnapshot?.national_alliance_view ?? { INDIA: 0, NDA: 0, OTH: 0 },
+    national: degradedNational,
     data_source: "watchdog_degraded",
     stale: true,
+    banner: "Limited data — primary scraper recovering",
   };
 
   // 5. Write degraded snapshot to R2
   try {
     const body = JSON.stringify(degraded);
-    await env.EW_SNAPSHOTS.put("snapshot.json", body, {
+    await env.EW_SNAPSHOTS.put("live/snapshot.json", body, {
       httpMetadata: {
         contentType: "application/json",
         cacheControl: CACHE_CONTROL,
@@ -138,18 +168,12 @@ async function runWatchdog(env) {
 }
 
 // ---------------------------------------------------------------------------
-// Minimal Statewise.htm parser using HTMLRewriter
-// Returns { S03: { leading: {PARTY: N}, declared: N }, ... }
+// Minimal Statewise.htm parser
+// Returns { S03: { leading: {ALL: N}, declared: N }, ... }
+// Note: Statewise page provides aggregate totals only (no party breakdown).
 // ---------------------------------------------------------------------------
 function parseStatewiseHtml(html) {
-  // CF HTMLRewriter is streaming; for simplicity in a Worker we use regex-based
-  // parsing since this is a <50KB page and we only need aggregate tallies.
   const results = {};
-
-  // ECI statewise tables typically have rows like:
-  //   <td>Assam</td><td>4</td><td>122</td><td>0</td><td>126</td>
-  // where columns are: State | Won | Leading | Others | Total
-  // We extract Won + Leading = leading tally per state.
 
   const STATE_NAME_TO_CODE = {
     "assam": "S03",
@@ -160,9 +184,8 @@ function parseStatewiseHtml(html) {
     "pondicherry": "U06",
   };
 
-  // Find table rows
+  // ECI statewise rows: State | Won | Leading | Others | Total
   const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-  const cellRe = /<td[^>]*>([\s\S]*?)<\/td>/gi;
 
   let rowMatch;
   while ((rowMatch = rowRe.exec(html)) !== null) {
@@ -184,7 +207,7 @@ function parseStatewiseHtml(html) {
     const total = won + leading;
 
     results[code] = {
-      leading: total > 0 ? { "ALL": total } : {},  // aggregate only; no party breakdown from statewise
+      leading: total > 0 ? { ALL: total } : {},  // aggregate only — no party breakdown here
       declared: won,
     };
   }
@@ -200,7 +223,6 @@ function stripHtml(s) {
 // Helpers
 // ---------------------------------------------------------------------------
 function toIst(d) {
-  // Returns ISO 8601 string in IST (+05:30)
   const offsetMs = 5.5 * 60 * 60 * 1000;
   const ist = new Date(d.getTime() + offsetMs);
   return ist.toISOString().replace("Z", "+05:30");

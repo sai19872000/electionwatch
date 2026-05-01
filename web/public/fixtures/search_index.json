@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {"id": "S22-1",  "name": "Gummidipoondi", "state": "Tamil Nadu",  "district": "Tiruvallur",  "aliases": ["கும்மிடிப்பூண்டி"]},
+    {"id": "S22-2",  "name": "Ponneri",        "state": "Tamil Nadu",  "district": "Tiruvallur",  "aliases": ["பொன்னேரி"]},
+    {"id": "S22-5",  "name": "Chennai North",  "state": "Tamil Nadu",  "district": "Chennai",     "aliases": ["சென்னை வடக்கு", "Madras North"]},
+    {"id": "S22-6",  "name": "Chennai South",  "state": "Tamil Nadu",  "district": "Chennai",     "aliases": ["சென்னை தெற்கு", "Madras South"]},
+    {"id": "S11-1",  "name": "Kasaragod",      "state": "Kerala",      "district": "Kasaragod",   "aliases": ["കാസർഗോഡ്"]},
+    {"id": "S11-2",  "name": "Manjeshwar",     "state": "Kerala",      "district": "Kasaragod",   "aliases": ["മഞ്ചേശ്വരം"]},
+    {"id": "S25-1",  "name": "Cooch Behar",    "state": "West Bengal", "district": "Cooch Behar", "aliases": ["কোচবিহার"]},
+    {"id": "S25-2",  "name": "Mathabhanga",    "state": "West Bengal", "district": "Cooch Behar", "aliases": ["মাথাভাঙা"]},
+    {"id": "S03-1",  "name": "Gossaigaon",     "state": "Assam",       "district": "Kokrajhar",   "aliases": ["গোঁসাইগাঁও"]},
+    {"id": "S03-2",  "name": "Kokrajhar East", "state": "Assam",       "district": "Kokrajhar",   "aliases": ["কোকৰাঝাৰ"]},
+    {"id": "U06-1",  "name": "Karaikal North", "state": "Puducherry",  "district": "Karaikal",    "aliases": ["காரைக்கால் வடக்கு"]},
+    {"id": "U06-2",  "name": "Karaikal South", "state": "Puducherry",  "district": "Karaikal",    "aliases": ["காரைக்கால் தெற்கு"]}
+  ]
+}

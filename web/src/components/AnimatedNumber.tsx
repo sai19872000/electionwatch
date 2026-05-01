@@ -6,10 +6,11 @@ import { useEffect, useState } from 'react';
 interface AnimatedNumberProps {
   value: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 // @registry-candidate v2
-export function AnimatedNumber({ value, className }: AnimatedNumberProps) {
+export function AnimatedNumber({ value, className, style }: AnimatedNumberProps) {
   const spring = useSpring(value, { stiffness: 100, damping: 30, duration: 0.6 });
   const [display, setDisplay] = useState(value);
 
@@ -22,7 +23,7 @@ export function AnimatedNumber({ value, className }: AnimatedNumberProps) {
   });
 
   return (
-    <span className={className} style={{ fontVariantNumeric: 'tabular-nums' }}>
+    <span className={className} style={{ fontVariantNumeric: 'tabular-nums', ...style }}>
       {display}
     </span>
   );

@@ -1,0 +1,12 @@
+{
+  "cycle": "ls_2024",
+  "_note": "2024 Lok Sabha results for the 5 in-cycle assembly states. Fixture stub — T1 data agent bakes the authoritative version from DataMeet + ECI Statistical Reports.",
+  "results": [
+    {"ls_seat": "S22-1",  "state": "Tamil Nadu",  "winner_party": "DMK",   "vote_share": {"DMK": 39.1, "BJP": 10.2, "INC": 19.3, "AIADMK": 22.1, "Others": 9.3}},
+    {"ls_seat": "S22-2",  "state": "Tamil Nadu",  "winner_party": "DMK",   "vote_share": {"DMK": 41.3, "BJP": 9.8,  "INC": 18.7, "AIADMK": 21.4, "Others": 8.8}},
+    {"ls_seat": "S11-1",  "state": "Kerala",      "winner_party": "INC",   "vote_share": {"INC": 38.2, "CPI(M)": 32.1, "BJP": 19.7, "IUML": 4.1, "Others": 5.9}},
+    {"ls_seat": "S25-1",  "state": "West Bengal", "winner_party": "TMC",   "vote_share": {"TMC": 47.8, "BJP": 38.2, "INC": 7.1, "Others": 6.9}},
+    {"ls_seat": "S03-1",  "state": "Assam",       "winner_party": "BJP",   "vote_share": {"BJP": 46.1, "INC": 28.3, "AGP": 8.2, "AIUDF": 11.4, "Others": 6.0}},
+    {"ls_seat": "U06-1",  "state": "Puducherry",  "winner_party": "INC",   "vote_share": {"INC": 42.1, "BJP": 22.4, "DMK": 18.3, "Others": 17.2}}
+  ]
+}

@@ -1,0 +1,57 @@
+/**
+ * Design tokens for ElectionWatch — dark-first.
+ * Vendored from the design brief (Manrope primary, dark surface).
+ * Reference these custom properties in all components; never hard-code
+ * hex values in component files.
+ */
+
+:root {
+  /* Surfaces */
+  --ew-bg:           #0f0f0f;
+  --ew-bg-card:      #191919;
+  --ew-bg-elevated:  #222222;
+  --ew-border:       #2d2d2d;
+
+  /* Text */
+  --ew-text-primary:  #ffffff;
+  --ew-text-secondary: #a1a1aa;   /* zinc-400 */
+  --ew-text-muted:    #52525b;    /* zinc-600 */
+
+  /* Alliance */
+  --ew-nda:    #FF9933;
+  --ew-india:  #19A3DC;
+  --ew-oth:    #6B7280;
+
+  /* Status */
+  --ew-live:   #4ade80;
+  --ew-stale:  #fbbf24;
+  --ew-error:  #f87171;
+
+  /* Motion */
+  --ew-transition-fast:   150ms ease;
+  --ew-transition-mid:    300ms ease;
+  --ew-transition-slow:   700ms ease;
+
+  /* Spacing scale (4-pt base) */
+  --ew-space-1: 0.25rem;
+  --ew-space-2: 0.5rem;
+  --ew-space-3: 0.75rem;
+  --ew-space-4: 1rem;
+  --ew-space-6: 1.5rem;
+  --ew-space-8: 2rem;
+
+  /* Radii */
+  --ew-radius-sm:  0.5rem;
+  --ew-radius-md:  0.75rem;
+  --ew-radius-lg:  1rem;
+  --ew-radius-full: 9999px;
+
+  /* Type scale */
+  --ew-font-xs:   0.75rem;   /* 12px */
+  --ew-font-sm:   0.875rem;  /* 14px */
+  --ew-font-base: 1rem;      /* 16px */
+  --ew-font-lg:   1.125rem;  /* 18px */
+  --ew-font-xl:   1.25rem;   /* 20px */
+  --ew-font-2xl:  1.5rem;    /* 24px */
+  --ew-font-3xl:  1.875rem;  /* 30px */
+}

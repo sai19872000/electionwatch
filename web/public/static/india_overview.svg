@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" aria-label="India overview map — 5 assembly states 2026">
+  <!-- Placeholder SVG outlines for the 5 in-cycle states.
+       T1 data agent replaces with authoritative simplified boundaries.
+       Each <path> carries id matching state_code so React can target fills:
+         S03 = Assam, S11 = Kerala, S22 = Tamil Nadu, S25 = West Bengal, U06 = Puducherry
+  -->
+  <defs>
+    <style>
+      path { fill: #2d2d2d; stroke: #3f3f3f; stroke-width: 1; transition: fill 0.5s ease; }
+      path:hover { opacity: 0.85; cursor: pointer; }
+      text { fill: #a1a1aa; font-family: Manrope, system-ui; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- West Bengal — east, roughly rectangular -->
+  <path id="S25"
+    d="M280,100 L340,100 L355,140 L350,200 L330,240 L300,250 L275,230 L270,190 L265,150 Z"
+    aria-label="West Bengal" />
+  <text x="305" y="175" text-anchor="middle">WB</text>
+
+  <!-- Assam — northeast, wide and low -->
+  <path id="S03"
+    d="M340,95 L430,90 L445,110 L440,140 L420,155 L380,158 L355,145 L340,120 Z"
+    aria-label="Assam" />
+  <text x="393" y="128" text-anchor="middle">AS</text>
+
+  <!-- Kerala — southwest thin strip -->
+  <path id="S11"
+    d="M170,350 L195,345 L205,380 L210,430 L205,490 L185,510 L165,495 L155,460 L150,420 L155,380 Z"
+    aria-label="Kerala" />
+  <text x="180" y="430" text-anchor="middle">KL</text>
+
+  <!-- Tamil Nadu — southeast -->
+  <path id="S22"
+    d="M205,340 L260,330 L285,360 L290,410 L280,460 L255,510 L225,530 L200,510 L185,480 L185,440 L195,390 Z"
+    aria-label="Tamil Nadu" />
+  <text x="237" y="430" text-anchor="middle">TN</text>
+
+  <!-- Puducherry — tiny enclave within Tamil Nadu coast -->
+  <path id="U06"
+    d="M248,472 L258,470 L262,482 L255,490 L245,488 Z"
+    aria-label="Puducherry" />
+  <text x="255" y="500" text-anchor="middle" font-size="8">PY</text>
+</svg>

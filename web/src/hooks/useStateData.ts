@@ -10,7 +10,7 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 export function useStateData(code: string) {
   const { data, error, isLoading } = useSWR<StateDetail>(
-    `${BASE}/state_${code}.json`,
+    `${BASE}/live/state_${code}.json`,
     fetcher,
     {
       refreshInterval: 20000,

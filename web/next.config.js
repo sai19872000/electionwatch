@@ -13,6 +13,13 @@
 // wired, point at the r2.dev public URL).
 const DEFAULT_DATA_BASE = 'https://ew-snapshots.saiteja.ai';
 
+// NOTE: security headers (CSP, X-Frame-Options, X-Content-Type-Options,
+// Referrer-Policy) are served via `web/public/_headers` by Cloudflare
+// Pages. Next's `headers()` config is a no-op under `output: 'export'`
+// (static export emits no Next server to apply them), so it was removed
+// here to avoid the false sense of coverage. Edit `public/_headers` to
+// change response headers in production.
+
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,

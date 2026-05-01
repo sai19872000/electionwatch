@@ -1,5 +1,5 @@
 import { ConstituencyPageClient } from './ConstituencyPageClient';
-import constituencies from '../../../../../../services/electionwatch_scraper/seed/constituencies.json';
+import constituencies from '@/data/constituencies.json';
 
 export function generateStaticParams() {
   return constituencies.constituencies.map((c: { state_code: string; ac_no: number }) => ({
