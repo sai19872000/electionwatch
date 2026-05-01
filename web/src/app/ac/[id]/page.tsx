@@ -1,4 +1,4 @@
-import { ConstituencyPageClient } from './ConstituencyPageClient';
+import { AcDetailClient } from './AcDetailClient';
 import constituencies from '@/data/constituencies.json';
 
 export function generateStaticParams() {
@@ -11,7 +11,7 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function ConstituencyPage({ params }: PageProps) {
+export default async function AcDetailPage({ params }: PageProps) {
   const { id } = await params;
-  return <ConstituencyPageClient id={id} />;
+  return <AcDetailClient id={id} />;
 }

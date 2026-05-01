@@ -1,0 +1,31 @@
+{
+  "_note": "Alliance mapping for 2026 assembly elections. Hand-curated from ECI accepted declarations. T1 data agent confirms + updates. OTH = no declared alliance.",
+  "alliances": {
+    "NDA": ["BJP", "AGP", "UPPL", "BPF", "UPP", "PMK", "DMDK", "ADGP", "AINRC"],
+    "INDIA": ["INC", "DMK", "CPI(M)", "CPI", "TMC", "AIUDF", "RSP", "IUML", "VCK", "MDMK", "AIFB", "SUCI", "AAP"],
+    "OTH": ["AIADMK", "BSP", "SP", "NCP", "AMMK", "AIMIM"]
+  },
+  "party_to_alliance": {
+    "BJP":    "NDA",
+    "AGP":    "NDA",
+    "UPPL":   "NDA",
+    "PMK":    "NDA",
+    "AINRC":  "NDA",
+    "INC":    "INDIA",
+    "DMK":    "INDIA",
+    "CPI(M)": "INDIA",
+    "CPI":    "INDIA",
+    "TMC":    "INDIA",
+    "AIUDF":  "INDIA",
+    "IUML":   "INDIA",
+    "VCK":    "INDIA",
+    "MDMK":   "INDIA",
+    "RSP":    "INDIA",
+    "AAP":    "INDIA",
+    "AIADMK": "OTH",
+    "BSP":    "OTH",
+    "SP":     "OTH",
+    "AMMK":   "OTH",
+    "AIMIM":  "OTH"
+  }
+}

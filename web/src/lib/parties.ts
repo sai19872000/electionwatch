@@ -1,4 +1,4 @@
-import partiesMaster from '../../../../services/electionwatch_scraper/seed/parties_master.json';
+import partiesMaster from '@/data/parties_master.json';
 
 interface PartyInfo {
   name: string;

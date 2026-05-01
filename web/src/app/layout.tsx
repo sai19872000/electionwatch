@@ -3,8 +3,16 @@ import './globals.css';
 import { CountdownBanner } from '@/components/CountdownBanner';
 
 export const metadata: Metadata = {
-  title: 'ElectionWatch India 2026',
+  title: {
+    default: 'ElectionWatch India 2026',
+    template: '%s · ElectionWatch',
+  },
   description: 'Live assembly election results for May 4, 2026 counting day — Assam, Kerala, Tamil Nadu, West Bengal, Puducherry',
+  metadataBase: new URL('https://electionwatch.saiteja.ai'),
+  openGraph: {
+    siteName: 'ElectionWatch India 2026',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
