@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://electionwatch.saiteja.ai/schemas/state.schema.json",
+  "title": "ElectionWatch State Snapshot",
+  "description": "Per-state snapshot (state_S22.json etc.) with constituency-level detail. Consumed by /state/[code] pages.",
+  "type": "object",
+  "required": ["as_of", "state", "code", "constituencies"],
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp (with IST offset +05:30) of the last scraper write for this state."
+    },
+    "state": {
+      "type": "string",
+      "description": "Human-readable state name, e.g. 'Tamil Nadu'."
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^(S03|S11|S22|S25|U06)$",
+      "description": "ECI state code."
+    },
+    "constituencies": {
+      "type": "array",
+      "description": "One entry per assembly constituency in this state, ordered by ac_no ascending.",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/constituencyResult"
+      }
+    }
+  },
+  "$defs": {
+    "constituencyResult": {
+      "type": "object",
+      "required": [
+        "ac_no", "name", "leading_candidate", "leading_party",
+        "leading_margin", "rounds_completed", "rounds_total",
+        "status", "last_change_ts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ac_no": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "ECI assembly constituency number within the state."
+        },
+        "name": {
+          "type": "string",
+          "description": "Official constituency name."
+        },
+        "leading_candidate": {
+          "type": ["string", "null"],
+          "description": "Name of the candidate currently leading. Null if counting not started."
+        },
+        "leading_party": {
+          "type": ["string", "null"],
+          "description": "Party code of the leading candidate. Null if counting not started."
+        },
+        "leading_margin": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Vote margin over the trailing candidate. Null if counting not started."
+        },
+        "rounds_completed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "EVM counting rounds completed so far."
+        },
+        "rounds_total": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total EVM counting rounds for this constituency."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "counting", "leading", "declared"],
+          "description": "pending=not started; counting=rounds in progress; leading=party ahead; declared=result final."
+        },
+        "winner": {
+          "type": ["string", "null"],
+          "description": "Present only when status=declared. Winning candidate name."
+        },
+        "winner_party": {
+          "type": ["string", "null"],
+          "description": "Present only when status=declared. Winning party code."
+        },
+        "final_margin": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Present only when status=declared. Final winning margin."
+        },
+        "last_change_ts": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when this row last changed in the scraper diff."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://electionwatch.saiteja.ai/schemas/events.schema.json",
+  "title": "ElectionWatch Events Log",
+  "description": "Rolling log of the last 200 notable constituency events, consumed by the frontend animation engine.",
+  "type": "object",
+  "required": ["events"],
+  "additionalProperties": false,
+  "properties": {
+    "events": {
+      "type": "array",
+      "description": "Most-recent first, capped at 200 entries.",
+      "maxItems": 200,
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/leadFlipEvent" },
+          { "$ref": "#/$defs/resultDeclaredEvent" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "baseEvent": {
+      "type": "object",
+      "required": ["type", "ac_no", "state", "ts"],
+      "properties": {
+        "ac_no": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Assembly constituency number within the state."
+        },
+        "state": {
+          "type": "string",
+          "pattern": "^(S03|S11|S22|S25|U06)$",
+          "description": "ECI state code."
+        },
+        "ts": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 timestamp when the event was detected by the scraper."
+        }
+      }
+    },
+    "leadFlipEvent": {
+      "allOf": [
+        { "$ref": "#/$defs/baseEvent" },
+        {
+          "type": "object",
+          "required": ["type", "from", "to"],
+          "additionalProperties": false,
+          "properties": {
+            "type":  { "type": "string", "const": "lead_flip" },
+            "ac_no": true,
+            "state": true,
+            "ts":    true,
+            "from": {
+              "type": ["string", "null"],
+              "description": "Party code that previously led. Null if first lead detected."
+            },
+            "to": {
+              "type": "string",
+              "description": "Party code that now leads."
+            }
+          }
+        }
+      ]
+    },
+    "resultDeclaredEvent": {
+      "allOf": [
+        { "$ref": "#/$defs/baseEvent" },
+        {
+          "type": "object",
+          "required": ["type", "winner", "party", "margin"],
+          "additionalProperties": false,
+          "properties": {
+            "type":   { "type": "string", "const": "result_declared" },
+            "ac_no":  true,
+            "state":  true,
+            "ts":     true,
+            "winner": {
+              "type": "string",
+              "description": "Winning candidate name."
+            },
+            "party": {
+              "type": "string",
+              "description": "Winning party code."
+            },
+            "margin": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Final winning margin in votes."
+            }
+          }
+        }
+      ]
+    }
+  }
+}

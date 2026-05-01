@@ -1,0 +1,39 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+.turbo/
+
+# CF Workers / Wrangler
+.wrangler/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+logs/
+
+# Env / secrets — never commit
+.env
+.env.*
+!.env.template
+!env.template
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo

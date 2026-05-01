@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-surface: #0f0f0f;
+  --bg-card: #191919;
+  --color-live: #4ade80;
+  --color-stale: #fbbf24;
+}
+
+html {
+  background-color: var(--bg-surface);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  html:not(.dark) {
+    background-color: #f9fafb;
+    color-scheme: light;
+  }
+}
+
+* {
+  font-variant-numeric: tabular-nums;
+}

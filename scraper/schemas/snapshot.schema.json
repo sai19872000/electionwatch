@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://electionwatch.saiteja.ai/schemas/snapshot.schema.json",
+  "title": "ElectionWatch Snapshot",
+  "description": "Top-level snapshot published every 30 s to R2; consumed by the frontend overview page.",
+  "type": "object",
+  "required": ["as_of", "scraper_run_id", "states", "national_alliance_view", "data_source", "stale"],
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp (with IST offset +05:30) of the last scraper write."
+    },
+    "scraper_run_id": {
+      "type": "string",
+      "pattern": "^[0-9]{8}_[0-9]{6}$",
+      "description": "Scraper cycle identifier, YYYYMMDD_HHMMSS."
+    },
+    "states": {
+      "type": "object",
+      "description": "Keyed by ECI state code (S03, S11, S22, S25, U06).",
+      "propertyNames": {
+        "pattern": "^(S03|S11|S22|S25|U06)$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/stateSummary"
+      },
+      "minProperties": 5,
+      "maxProperties": 5
+    },
+    "national_alliance_view": {
+      "type": "object",
+      "description": "Seats leading/won aggregated by alliance across all 824 constituencies.",
+      "required": ["INDIA", "NDA", "OTH"],
+      "additionalProperties": false,
+      "properties": {
+        "INDIA": { "type": "integer", "minimum": 0 },
+        "NDA":   { "type": "integer", "minimum": 0 },
+        "OTH":   { "type": "integer", "minimum": 0 }
+      }
+    },
+    "data_source": {
+      "type": "string",
+      "enum": ["eci_primary", "ceo_fallback", "watchdog_minimal"],
+      "description": "Which scraper path produced this snapshot."
+    },
+    "stale": {
+      "type": "boolean",
+      "description": "True when scraper has not pushed a fresh cycle in >90 s; frontend shows stale banner."
+    },
+    "stale_since": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Present (non-null) only when stale=true. Timestamp when scraper last succeeded."
+    }
+  },
+  "$defs": {
+    "stateSummary": {
+      "type": "object",
+      "required": ["name", "total_seats", "leading", "declared"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable state name."
+        },
+        "total_seats": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total assembly constituencies in this state."
+        },
+        "leading": {
+          "type": "object",
+          "description": "Party code → seats where party is leading or has won.",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "declared": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of constituencies where result has been declared."
+        },
+        "source": {
+          "type": "string",
+          "enum": ["eci_primary", "ceo_fallback", "watchdog_minimal"],
+          "description": "Per-state data source, may differ from top-level when using fallback."
+        }
+      }
+    }
+  }
+}

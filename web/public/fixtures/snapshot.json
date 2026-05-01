@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-05-04T08:00:00+05:30",
+  "scraper_run_id": "pre_counting",
+  "states": {
+    "S03": {"name": "Assam", "total_seats": 126, "leading": {}, "declared": 0, "source": "eci_primary"},
+    "S11": {"name": "Kerala", "total_seats": 140, "leading": {}, "declared": 0, "source": "eci_primary"},
+    "S22": {"name": "Tamil Nadu", "total_seats": 234, "leading": {}, "declared": 0, "source": "eci_primary"},
+    "S25": {"name": "West Bengal", "total_seats": 294, "leading": {}, "declared": 0, "source": "eci_primary"},
+    "U06": {"name": "Puducherry", "total_seats": 30, "leading": {}, "declared": 0, "source": "eci_primary"}
+  },
+  "national_alliance_view": {"INDIA": 0, "NDA": 0, "OTH": 0},
+  "data_source": "eci_primary",
+  "stale": false,
+  "stale_since": null
+}

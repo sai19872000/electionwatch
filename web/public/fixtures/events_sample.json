@@ -1,0 +1,132 @@
+{
+  "events": [
+    {
+      "type": "result_declared",
+      "ac_no": 7,
+      "state": "S22",
+      "winner": "N. Baskar",
+      "party": "DMK",
+      "margin": 18234,
+      "ts": "2026-05-04T10:31:02+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 12,
+      "state": "S22",
+      "from": "AIADMK",
+      "to": "INC",
+      "ts": "2026-05-04T10:55:48+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 34,
+      "state": "S25",
+      "winner": "Anita Mondal",
+      "party": "TMC",
+      "margin": 9871,
+      "ts": "2026-05-04T10:38:44+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 18,
+      "state": "S03",
+      "from": "INC",
+      "to": "BJP",
+      "ts": "2026-05-04T10:42:17+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 5,
+      "state": "S11",
+      "winner": "T.K. Rajesh",
+      "party": "CPI(M)",
+      "margin": 14320,
+      "ts": "2026-05-04T10:44:59+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 9,
+      "state": "S22",
+      "from": "DMK",
+      "to": "AIADMK",
+      "ts": "2026-05-04T10:49:37+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 2,
+      "state": "U06",
+      "winner": "V. Narayanasamy",
+      "party": "INC",
+      "margin": 3112,
+      "ts": "2026-05-04T10:52:29+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 88,
+      "state": "S25",
+      "winner": "Surajit Dey",
+      "party": "TMC",
+      "margin": 21445,
+      "ts": "2026-05-04T10:57:11+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 44,
+      "state": "S11",
+      "from": "BJP",
+      "to": "INC",
+      "ts": "2026-05-04T11:01:04+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 11,
+      "state": "S03",
+      "winner": "Ranjit Das",
+      "party": "BJP",
+      "margin": 6783,
+      "ts": "2026-05-04T11:04:33+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 3,
+      "state": "S22",
+      "from": "DMK",
+      "to": "AIADMK",
+      "ts": "2026-05-04T10:44:55+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 17,
+      "state": "S11",
+      "winner": "K. Babu",
+      "party": "INC",
+      "margin": 8921,
+      "ts": "2026-05-04T11:07:52+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 156,
+      "state": "S25",
+      "from": "BJP",
+      "to": "TMC",
+      "ts": "2026-05-04T11:09:19+05:30"
+    },
+    {
+      "type": "result_declared",
+      "ac_no": 29,
+      "state": "S22",
+      "winner": "S. Murugesan",
+      "party": "DMK",
+      "margin": 15677,
+      "ts": "2026-05-04T11:11:08+05:30"
+    },
+    {
+      "type": "lead_flip",
+      "ac_no": 7,
+      "state": "S03",
+      "from": null,
+      "to": "AIUDF",
+      "ts": "2026-05-04T08:42:03+05:30"
+    }
+  ]
+}

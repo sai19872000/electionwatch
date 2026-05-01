@@ -1,0 +1,26 @@
+[Unit]
+Description=ElectionWatch ECI scraper — 30s loop, R2 publisher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/factory/services/electionwatch_scraper
+ExecStart=/usr/bin/python3 %h/factory/services/electionwatch_scraper/scraper.py
+Restart=on-failure
+RestartSec=5s
+
+# Load R2 keys and ECI config — gitignored
+EnvironmentFile=%h/factory/.env.electionwatch
+
+# Resource limits: scraper does ~6 GETs/30s; 50 MB RAM ceiling is generous
+MemoryMax=150M
+CPUQuota=20%
+
+# Stdout/stderr → journald with identifier (journalctl -u electionwatch-scraper)
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=electionwatch-scraper
+
+[Install]
+WantedBy=default.target

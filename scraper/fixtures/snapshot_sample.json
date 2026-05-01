@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-05-04T11:17:43+05:30",
+  "scraper_run_id": "20260504_111743",
+  "states": {
+    "S03": {
+      "name": "Assam",
+      "total_seats": 126,
+      "leading": {
+        "BJP": 71,
+        "INC": 28,
+        "AIUDF": 12,
+        "AGP": 8,
+        "OTH": 7
+      },
+      "declared": 14,
+      "source": "eci_primary"
+    },
+    "S11": {
+      "name": "Kerala",
+      "total_seats": 140,
+      "leading": {
+        "CPI(M)": 67,
+        "INC": 45,
+        "BJP": 9,
+        "IUML": 11,
+        "KC(M)": 4,
+        "OTH": 4
+      },
+      "declared": 31,
+      "source": "eci_primary"
+    },
+    "S22": {
+      "name": "Tamil Nadu",
+      "total_seats": 234,
+      "leading": {
+        "DMK": 138,
+        "AIADMK": 66,
+        "BJP": 8,
+        "PMK": 9,
+        "NTK": 3,
+        "MNM": 2,
+        "AMMK": 2,
+        "OTH": 6
+      },
+      "declared": 52,
+      "source": "eci_primary"
+    },
+    "S25": {
+      "name": "West Bengal",
+      "total_seats": 294,
+      "leading": {
+        "TMC": 168,
+        "BJP": 78,
+        "INC": 24,
+        "ISF": 9,
+        "CPI(M)": 7,
+        "AIFB": 3,
+        "OTH": 5
+      },
+      "declared": 73,
+      "source": "eci_primary"
+    },
+    "U06": {
+      "name": "Puducherry",
+      "total_seats": 30,
+      "leading": {
+        "INC": 12,
+        "AINRC": 8,
+        "BJP": 5,
+        "DMK": 3,
+        "OTH": 2
+      },
+      "declared": 7,
+      "source": "eci_primary"
+    }
+  },
+  "national_alliance_view": {
+    "INDIA": 489,
+    "NDA": 179,
+    "OTH": 156
+  },
+  "data_source": "eci_primary",
+  "stale": false,
+  "stale_since": null
+}

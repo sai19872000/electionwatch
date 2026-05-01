@@ -1,0 +1,18 @@
+name = "electionwatch-watchdog"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# Run every minute — watchdog fires only when home scraper is >90s stale.
+[triggers]
+crons = ["*/1 * * * *"]
+
+# R2 binding: same bucket the scraper writes to.
+# Bucket must be created in your CF account before deploying.
+[[r2_buckets]]
+binding = "EW_SNAPSHOTS"
+bucket_name = "ew-snapshots"
+
+# ECI base path must be set as a Worker secret/env var before deploying.
+# wrangler secret put ECI_BASE_PATH
+# wrangler secret put TG_BOT_TOKEN   (optional — for watchdog p0 alert)
+# wrangler secret put TG_CHAT_ID     (optional)
