@@ -13,34 +13,12 @@
 // wired, point at the r2.dev public URL).
 const DEFAULT_DATA_BASE = 'https://ew-snapshots.saiteja.ai';
 
-// R2 origin used in the CSP connect-src directive. Must match the host that
-// serves live/snapshot.json and live/state_*.json at runtime.
-const r2Host = (() => {
-  const base = process.env.NEXT_PUBLIC_DATA_BASE || DEFAULT_DATA_BASE;
-  try {
-    return new URL(base).origin;
-  } catch {
-    return DEFAULT_DATA_BASE;
-  }
-})();
-
-const securityHeaders = [
-  {
-    key: 'Content-Security-Policy',
-    // worker-src blob: required by MapLibre GL JS (spawns a Worker from a blob URL).
-    value: [
-      "default-src 'self'",
-      "script-src 'self'",
-      "img-src 'self' data: https:",
-      `connect-src 'self' ${r2Host}`,
-      "worker-src blob:",
-      "style-src 'self' 'unsafe-inline'",
-    ].join('; '),
-  },
-  { key: 'X-Frame-Options', value: 'DENY' },
-  { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-];
+// NOTE: security headers (CSP, X-Frame-Options, X-Content-Type-Options,
+// Referrer-Policy) are served via `web/public/_headers` by Cloudflare
+// Pages. Next's `headers()` config is a no-op under `output: 'export'`
+// (static export emits no Next server to apply them), so it was removed
+// here to avoid the false sense of coverage. Edit `public/_headers` to
+// change response headers in production.
 
 const nextConfig = {
   output: 'export',
@@ -50,14 +28,6 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_DATA_BASE: process.env.NEXT_PUBLIC_DATA_BASE || DEFAULT_DATA_BASE,
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ];
   },
 };
 

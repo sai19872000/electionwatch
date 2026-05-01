@@ -2,6 +2,9 @@
   "name": "electionwatch",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.19"
+  },
   "scripts": {
     "predev": "node scripts/copy-static.mjs",
     "dev": "next dev",

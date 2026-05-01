@@ -3,8 +3,7 @@
  * Copies data/dist/*.topojson -> web/public/static/ at build/dev time.
  * Run automatically via npm predev / prebuild hooks.
  */
-import { copyFile, mkdir } from 'node:fs/promises';
-import { glob } from 'node:fs/promises';
+import { copyFile, mkdir, readdir } from 'node:fs/promises';
 import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,8 +14,9 @@ const destDir = join(webRoot, 'public', 'static');
 
 await mkdir(destDir, { recursive: true });
 
+const files = (await readdir(dataDir)).filter(f => f.endsWith('.topojson'));
 let count = 0;
-for await (const src of glob('*.topojson', { cwd: dataDir })) {
+for (const src of files) {
   const srcPath = join(dataDir, src);
   const destPath = join(destDir, basename(src));
   await copyFile(srcPath, destPath);
