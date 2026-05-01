@@ -6,18 +6,43 @@ export interface StateData {
   source?: string;
 }
 
+export interface AllianceView {
+  alliance: string;
+  seats_won: number;
+  seats_leading: number;
+  total: number;
+}
+
 export interface Snapshot {
   as_of: string;
   scraper_run_id?: string;
   states: Record<string, StateData>;
-  national_alliance_view: {
-    INDIA: number;
-    NDA: number;
-    OTH: number;
-  };
-  data_source: 'eci_primary' | 'watchdog_minimal';
+  national_alliance_view: AllianceView[];
+  data_source: 'eci_primary' | 'watchdog_minimal' | 'watchdog_degraded' | 'ceo_fallback';
   stale: boolean;
   stale_since: string | null;
+}
+
+/** Raw shape emitted by scraper/scraper.py — states is an array, not a Record */
+export interface RawScraperSnapshot {
+  as_of: string;
+  scraper_run_id?: string;
+  states: Array<{
+    code: string;
+    name: string;
+    /** Scraper field; aliased to total_seats in normaliseSnapshot() */
+    total_ac: number;
+    declared: number;
+    leading: Record<string, number>;
+  }>;
+  national?: {
+    declared: number;
+    leading: Record<string, number>;
+    vote_share?: Record<string, number>;
+  };
+  data_source: string;
+  stale: boolean;
+  stale_since?: string | null;
 }
 
 export interface Constituency {

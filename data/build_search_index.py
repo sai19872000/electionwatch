@@ -5,7 +5,7 @@ Build search_index.json — 824 rows covering 5 states:
   West Bengal (S25): 294 ACs
   Tamil Nadu (S22): 234 ACs
   Kerala (S11): 140 ACs
-  Puducherry (S26): 30 ACs
+  Puducherry (U06): 30 ACs   # U-prefix = Union Territory (ECI/census code)
 """
 
 import json
@@ -146,7 +146,7 @@ assam = [
 
 for ac_no, name, district, aliases in assam:
     rows.append({
-        "id": f"S03_{ac_no:03d}",
+        "id": f"S03-{ac_no}",
         "name": name,
         "state": "S03",
         "state_name": "Assam",
@@ -456,7 +456,7 @@ wb = [
 
 for ac_no, name, district, aliases in wb:
     rows.append({
-        "id": f"S25_{ac_no:03d}",
+        "id": f"S25-{ac_no}",
         "name": name,
         "state": "S25",
         "state_name": "West Bengal",
@@ -706,7 +706,7 @@ tn = [
 
 for ac_no, name, district, aliases in tn:
     rows.append({
-        "id": f"S22_{ac_no:03d}",
+        "id": f"S22-{ac_no}",
         "name": name,
         "state": "S22",
         "state_name": "Tamil Nadu",
@@ -862,7 +862,7 @@ kerala = [
 
 for ac_no, name, district, aliases in kerala:
     rows.append({
-        "id": f"S11_{ac_no:03d}",
+        "id": f"S11-{ac_no}",
         "name": name,
         "state": "S11",
         "state_name": "Kerala",
@@ -871,7 +871,7 @@ for ac_no, name, district, aliases in kerala:
     })
 
 # ---------------------------------------------------------------------------
-# PUDUCHERRY (S26) — 30 ACs
+# PUDUCHERRY (U06) — 30 ACs  (U06 = ECI/census code for UT Puducherry)
 # ---------------------------------------------------------------------------
 puducherry = [
     (1, "Mannadipet", "Puducherry", ["மண்ணாடிப்பேட்டை"]),
@@ -908,9 +908,9 @@ puducherry = [
 
 for ac_no, name, district, aliases in puducherry:
     rows.append({
-        "id": f"S26_{ac_no:03d}",
+        "id": f"U06-{ac_no}",
         "name": name,
-        "state": "S26",
+        "state": "U06",
         "state_name": "Puducherry",
         "district": district,
         "aliases": aliases,
@@ -933,6 +933,6 @@ assert len(rows) == 824, f"Expected 824 rows, got {len(rows)}"
 import os
 out_path = os.path.join(os.path.dirname(__file__), "search_index.json")
 with open(out_path, "w", encoding="utf-8") as f:
-    json.dump(rows, f, ensure_ascii=False, indent=2)
+    json.dump({"rows": rows}, f, ensure_ascii=False, indent=2)
 
 print(f"\nWrote {len(rows)} rows to {out_path}")

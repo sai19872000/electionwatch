@@ -17,9 +17,12 @@ import stateS22 from '../../public/fixtures/state_S22.json';
 import stateS25 from '../../public/fixtures/state_S25.json';
 import stateU06 from '../../public/fixtures/state_U06.json';
 
-import type { Snapshot, StateDetail } from './types';
+import type { RawScraperSnapshot, StateDetail } from './types';
 
-export const BAKED_SNAPSHOT: Snapshot = snapshotJson as Snapshot;
+// BAKED_SNAPSHOT uses the scraper's raw wire format (states is an array with
+// total_ac). useSnapshot.normaliseSnapshot() converts it to the TS Snapshot
+// contract before consumers see it.
+export const BAKED_SNAPSHOT: RawScraperSnapshot = snapshotJson as RawScraperSnapshot;
 
 export const BAKED_STATES: Record<string, StateDetail> = {
   S03: stateS03 as StateDetail,

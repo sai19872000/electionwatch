@@ -83,7 +83,7 @@ console.log("🗺  ElectionWatch data build — " + new Date().toISOString());
 mkdirSync(DIST, { recursive: true });
 
 // 1. TopoJSON shards (5 states)
-const STATE_CODES = ["S03", "S11", "S22", "S25", "S26"] as const;
+const STATE_CODES = ["S03", "S11", "S22", "S25", "U06"] as const;
 type StateCode = (typeof STATE_CODES)[number];
 
 console.log("\n[1] TopoJSON shards");
@@ -111,7 +111,7 @@ const STATE_NAMES: Record<StateCode, string> = {
   S11: "kerala",
   S22: "tamilnadu",
   S25: "westbengal",
-  S26: "puducherry",
+  U06: "puducherry",
 };
 for (const sc of STATE_CODES) {
   const name = STATE_NAMES[sc];

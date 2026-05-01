@@ -139,6 +139,7 @@ export function ConstituencySearch() {
           aria-autocomplete="list"
           aria-controls="search-results"
           aria-activedescendant={activeIdx >= 0 ? `sr-${activeIdx}` : undefined}
+          maxLength={100}
           className="w-full pl-9 pr-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors"
         />
       </div>
@@ -177,7 +178,7 @@ export function ConstituencySearch() {
           ref={listRef}
           className="absolute top-full left-0 right-0 mt-1 z-50 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl px-4 py-3 text-zinc-500 text-sm"
         >
-          No results for "{query}"
+          No results for &ldquo;{query.slice(0, 80)}&rdquo;
         </div>
       )}
     </div>

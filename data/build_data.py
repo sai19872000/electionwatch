@@ -165,7 +165,7 @@ KL_LS_2024 = [
 
 # ── PUDUCHERRY (1 LS seat, 2024) ─────────────────────────────────────────────
 PY_LS_2024 = [
-    seat("PY01","Pondicherry","S26","INC",{"INC":46.4,"AINRC":26.8,"BJP":12.2,"DMK":8.4,"others":6.2}),
+    seat("PY01","Pondicherry","U06","INC",{"INC":46.4,"AINRC":26.8,"BJP":12.2,"DMK":8.4,"others":6.2}),
 ]
 
 # ── REMAINING 467 LS SEATS (rest of India) ───────────────────────────────────
@@ -384,7 +384,7 @@ KL_LS_2019 = [
 ]
 
 PY_LS_2019 = [
-    seat("PY01","Pondicherry","S26","INC",{"INC":48.4,"AINRC":28.4,"BJP":8.2,"DMK":8.4,"others":6.6}),
+    seat("PY01","Pondicherry","U06","INC",{"INC":48.4,"AINRC":28.4,"BJP":8.2,"DMK":8.4,"others":6.6}),
 ]
 
 # Build 2019 dataset (full 543 seats)

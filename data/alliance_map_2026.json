@@ -4,7 +4,7 @@
     "source": "ECI accepted alliance declarations filed pre-poll; cross-checked with ADR/MyNeta pre-poll affidavit data",
     "generated": "2026-05-01",
     "alliances": ["NDA", "INDIA", "Others"],
-    "states_in_cycle": ["S03", "S11", "S22", "S25", "S26"],
+    "states_in_cycle": ["S03", "S11", "S22", "S25", "U06"],
     "_l1_decisions": {
       "aiadmk_status": "AIADMK classified as Others for TN 2026 after formal split from BJP-NDA in June 2023. AIADMK contested 2024 LS independently and declared state-level elections would be fought alone. Not in NDA or INDIA blocs for S22 cycle.",
       "pmk_status": "PMK (Pattali Makkal Katchi) returned to NDA fold for TN 2026 per alliance declaration. Classified NDA for S22.",
@@ -21,13 +21,13 @@
     "BJP": {
       "full_name": "Bharatiya Janata Party",
       "alliance": "NDA",
-      "states": ["S03", "S11", "S22", "S25", "S26"],
+      "states": ["S03", "S11", "S22", "S25", "U06"],
       "color": "#FF9933"
     },
     "INC": {
       "full_name": "Indian National Congress",
       "alliance": "INDIA",
-      "states": ["S03", "S11", "S22", "S25", "S26"],
+      "states": ["S03", "S11", "S22", "S25", "U06"],
       "color": "#00BFFF"
     },
     "AGP": {
@@ -114,7 +114,7 @@
     "DMK": {
       "full_name": "Dravida Munnetra Kazhagam",
       "alliance": "INDIA",
-      "states": ["S22", "S26"],
+      "states": ["S22", "U06"],
       "color": "#CC0000"
     },
     "AIADMK": {
@@ -166,14 +166,14 @@
     "AINRC": {
       "full_name": "All India N.R. Congress",
       "alliance": "NDA",
-      "states": ["S26"],
+      "states": ["U06"],
       "color": "#FF7722",
       "_note": "AINRC aligned with BJP/NDA for Puducherry 2026"
     },
     "IND": {
       "full_name": "Independent",
       "alliance": "Others",
-      "states": ["S03", "S11", "S22", "S25", "S26"],
+      "states": ["S03", "S11", "S22", "S25", "U06"],
       "color": "#808080"
     },
     "NPF": {
@@ -191,7 +191,7 @@
     "others": {
       "full_name": "Other / Smaller Parties",
       "alliance": "Others",
-      "states": ["S03", "S11", "S22", "S25", "S26"],
+      "states": ["S03", "S11", "S22", "S25", "U06"],
       "color": "#999999"
     }
   },
@@ -207,6 +207,6 @@
     "S11": "Kerala 2026: LDF (CPI(M)-led) and UDF (INC-IUML-led) are the two main fronts. NDA contests but has historically not won seats in Kerala assembly. LDF classified separately as it is not formally part of INDIA bloc despite both opposing NDA.",
     "S22": "Tamil Nadu 2026: DMK-led INDIA alliance faces AIADMK independently and BJP-PMK NDA. AIADMK's split from NDA in 2023 significantly changed TN political calculus. AIMIM contests a few seats independently.",
     "S25": "West Bengal 2026: TMC leads INDIA alliance in state. BJP is primary NDA force. Left parties weakened but informally with INDIA. INC has minimal footprint.",
-    "S26": "Puducherry 2026: AINRC-BJP NDA alliance vs INC-DMK INDIA alliance. Territory has only 30 ACs; smaller parties and independents have historically won several seats."
+    "U06": "Puducherry 2026: AINRC-BJP NDA alliance vs INC-DMK INDIA alliance. Territory has only 30 ACs; smaller parties and independents have historically won several seats."
   }
 }

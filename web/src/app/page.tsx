@@ -1,6 +1,7 @@
 'use client';
 
 import { useSnapshot } from '@/hooks/useSnapshot';
+import { allianceTotals } from '@/lib/alliance';
 import { AllianceCounter } from '@/components/AllianceCounter';
 import { OverviewSvgChoropleth } from '@/components/OverviewSvgChoropleth';
 import { PartyDonut } from '@/components/PartyDonut';
@@ -14,9 +15,10 @@ import Link from 'next/link';
 export default function OverviewPage() {
   const { snapshot, isLoading } = useSnapshot();
 
-  const nda   = snapshot?.national_alliance_view.NDA   ?? 0;
-  const india = snapshot?.national_alliance_view.INDIA ?? 0;
-  const oth   = snapshot?.national_alliance_view.OTH   ?? 0;
+  const av    = snapshot ? allianceTotals(snapshot.national_alliance_view) : {};
+  const nda   = av.NDA   ?? 0;
+  const india = av.INDIA ?? 0;
+  const oth   = av.OTH   ?? 0;
 
   return (
     <div className="min-h-screen flex flex-col">
