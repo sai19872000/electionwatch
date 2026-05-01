@@ -5,19 +5,20 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=%h/factory/services/electionwatch_scraper
-ExecStart=/usr/bin/python3 %h/factory/services/electionwatch_scraper/scraper.py
+WorkingDirectory=%h/electionwatch/scraper
+ExecStart=/usr/bin/python3 -u %h/electionwatch/scraper/scraper.py
 Restart=on-failure
 RestartSec=5s
 
 # Load R2 keys and ECI config — gitignored
 EnvironmentFile=%h/factory/.env.electionwatch
 
-# Resource limits: scraper does ~6 GETs/30s; 50 MB RAM ceiling is generous
+# Resource limits: scraper does ~6 GETs/30s; 150 MB RAM ceiling is generous
 MemoryMax=150M
 CPUQuota=20%
 
 # Stdout/stderr → journald with identifier (journalctl -u electionwatch-scraper)
+# scraper.py also writes to ~/factory/logs/electionwatch_scraper.log for cross-project tail
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=electionwatch-scraper

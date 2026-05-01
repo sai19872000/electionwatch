@@ -1,23 +1,26 @@
 {
+  "version": 1,
   "as_of": "2026-05-04T11:17:43+05:30",
   "scraper_run_id": "20260504_111743",
-  "states": {
-    "S03": {
+  "states": [
+    {
+      "code": "S03",
       "name": "Assam",
-      "total_seats": 126,
+      "total_ac": 126,
+      "declared": 14,
       "leading": {
         "BJP": 71,
         "INC": 28,
         "AIUDF": 12,
         "AGP": 8,
         "OTH": 7
-      },
-      "declared": 14,
-      "source": "eci_primary"
+      }
     },
-    "S11": {
+    {
+      "code": "S11",
       "name": "Kerala",
-      "total_seats": 140,
+      "total_ac": 140,
+      "declared": 31,
       "leading": {
         "CPI(M)": 67,
         "INC": 45,
@@ -25,13 +28,13 @@
         "IUML": 11,
         "KC(M)": 4,
         "OTH": 4
-      },
-      "declared": 31,
-      "source": "eci_primary"
+      }
     },
-    "S22": {
+    {
+      "code": "S22",
       "name": "Tamil Nadu",
-      "total_seats": 234,
+      "total_ac": 234,
+      "declared": 52,
       "leading": {
         "DMK": 138,
         "AIADMK": 66,
@@ -41,13 +44,13 @@
         "MNM": 2,
         "AMMK": 2,
         "OTH": 6
-      },
-      "declared": 52,
-      "source": "eci_primary"
+      }
     },
-    "S25": {
+    {
+      "code": "S25",
       "name": "West Bengal",
-      "total_seats": 294,
+      "total_ac": 294,
+      "declared": 73,
       "leading": {
         "TMC": 168,
         "BJP": 78,
@@ -56,30 +59,41 @@
         "CPI(M)": 7,
         "AIFB": 3,
         "OTH": 5
-      },
-      "declared": 73,
-      "source": "eci_primary"
+      }
     },
-    "U06": {
+    {
+      "code": "U06",
       "name": "Puducherry",
-      "total_seats": 30,
+      "total_ac": 30,
+      "declared": 7,
       "leading": {
         "INC": 12,
         "AINRC": 8,
         "BJP": 5,
         "DMK": 3,
         "OTH": 2
-      },
-      "declared": 7,
-      "source": "eci_primary"
+      }
     }
-  },
-  "national_alliance_view": {
-    "INDIA": 489,
-    "NDA": 179,
-    "OTH": 156
+  ],
+  "national": {
+    "declared": 177,
+    "leading": {
+      "DMK": 138,
+      "BJP": 171,
+      "INC": 109,
+      "TMC": 168,
+      "AIADMK": 66,
+      "CPI(M)": 74,
+      "AIUDF": 12,
+      "AGP": 8,
+      "IUML": 11,
+      "PMK": 9,
+      "ISF": 9,
+      "OTH": 49
+    },
+    "vote_share": {}
   },
   "data_source": "eci_primary",
   "stale": false,
-  "stale_since": null
+  "banner": null
 }
