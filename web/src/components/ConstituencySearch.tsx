@@ -121,7 +121,7 @@ export function ConstituencySearch() {
     <div className="relative w-full max-w-xs sm:max-w-sm">
       <div className="relative flex items-center">
         <svg
-          className="absolute left-3 w-4 h-4 text-zinc-500 pointer-events-none"
+          className="absolute left-3 w-4 h-4 text-muted pointer-events-none"
           fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -140,7 +140,7 @@ export function ConstituencySearch() {
           aria-controls="search-results"
           aria-activedescendant={activeIdx >= 0 ? `sr-${activeIdx}` : undefined}
           maxLength={100}
-          className="w-full pl-9 pr-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors"
+          className="w-full pl-9 pr-3 py-2 bg-surface2 border border-border rounded-lg text-sm text-fg placeholder:text-muted focus:outline-none focus:border-accent/60 transition-colors"
         />
       </div>
 
@@ -150,7 +150,7 @@ export function ConstituencySearch() {
           id="search-results"
           role="listbox"
           aria-label="Constituency search results"
-          className="absolute top-full left-0 right-0 mt-1 z-50 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl overflow-hidden"
+          className="absolute top-full left-0 right-0 mt-1 z-50 bg-surface border border-border rounded-lg shadow-xl overflow-hidden"
         >
           {results.map((result, idx) => (
             <button
@@ -160,14 +160,14 @@ export function ConstituencySearch() {
               aria-selected={idx === activeIdx}
               onClick={() => navigate(result.item)}
               className={`w-full text-left px-4 py-2.5 flex items-center gap-3 transition-colors ${
-                idx === activeIdx ? 'bg-zinc-700' : 'hover:bg-zinc-800'
+                idx === activeIdx ? 'bg-surface2' : 'hover:bg-surface2/60'
               }`}
             >
               <span className="flex-1 min-w-0">
-                <span className="text-white text-sm font-medium block truncate">{result.item.name}</span>
-                <span className="text-zinc-500 text-xs block truncate">{result.item.state} · {result.item.district}</span>
+                <span className="text-fg text-sm font-medium block truncate">{result.item.name}</span>
+                <span className="text-muted text-xs block truncate">{result.item.state} · {result.item.district}</span>
               </span>
-              <span className="text-zinc-600 text-xs flex-shrink-0">{result.item.id}</span>
+              <span className="text-muted text-xs flex-shrink-0">{result.item.id}</span>
             </button>
           ))}
         </div>
@@ -176,7 +176,7 @@ export function ConstituencySearch() {
       {open && results.length === 0 && query.length >= 2 && (
         <div
           ref={listRef}
-          className="absolute top-full left-0 right-0 mt-1 z-50 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl px-4 py-3 text-zinc-500 text-sm"
+          className="absolute top-full left-0 right-0 mt-1 z-50 bg-surface border border-border rounded-lg shadow-xl px-4 py-3 text-muted text-sm"
         >
           No results for &ldquo;{query.slice(0, 80)}&rdquo;
         </div>

@@ -44,8 +44,8 @@ export function HistoryOverlay({ activeCycle, onChange, deltaMode, onDeltaToggle
             onClick={() => onChange(cycle)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
               activeCycle === cycle
-                ? 'bg-white text-zinc-900'
-                : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200'
+                ? 'bg-fg text-bg'
+                : 'bg-surface2 text-muted hover:bg-surface2/80 hover:text-fg'
             }`}
           >
             {CYCLE_LABELS[cycle]}
@@ -54,15 +54,15 @@ export function HistoryOverlay({ activeCycle, onChange, deltaMode, onDeltaToggle
       </div>
 
       <div className="flex items-center gap-3">
-        <p className="text-zinc-500 text-xs flex-1">{CYCLE_NOTE[activeCycle]}</p>
+        <p className="text-muted text-xs flex-1">{CYCLE_NOTE[activeCycle]}</p>
 
         {activeCycle !== 'live' && (
           <button
             onClick={onDeltaToggle}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
               deltaMode
-                ? 'bg-amber-500/20 text-amber-400 border border-amber-500/40'
-                : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
+                ? 'bg-warn/15 text-warn border border-warn/30'
+                : 'bg-surface2 text-muted hover:bg-surface2/80'
             }`}
             aria-pressed={deltaMode}
             title="Δ mode: highlights seats that changed vs current cycle"

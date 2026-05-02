@@ -31,42 +31,42 @@ export default function OverviewPage() {
       )}
 
       {/* Sticky header with search — the LCP element (text renders first, map alongside) */}
-      <header className="sticky top-0 z-30 bg-[#0f0f0f]/95 backdrop-blur border-b border-zinc-800 px-4 py-3 flex items-center gap-3">
-        <h1 className="text-white font-bold text-base tracking-tight whitespace-nowrap">
+      <header className="sticky top-0 z-30 bg-bg/80 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
+        <h1 className="text-fg font-medium text-base tracking-tight whitespace-nowrap">
           ElectionWatch{' '}
-          <span className="text-zinc-500 font-normal text-sm">May 4, 2026</span>
+          <span className="text-muted font-normal text-sm">May 4, 2026</span>
         </h1>
         <div className="flex-1" />
         <ConstituencySearch />
-        <Link href="/compare" className="hidden sm:block text-zinc-500 hover:text-white text-xs transition-colors whitespace-nowrap ml-2">
+        <Link href="/compare" className="hidden sm:block text-muted hover:text-accent text-xs transition-colors whitespace-nowrap ml-2">
           History →
         </Link>
       </header>
 
       <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-4 space-y-6">
         {isLoading && !snapshot && (
-          <p className="text-zinc-500 text-sm animate-pulse pt-8 text-center">Loading results…</p>
+          <p className="text-muted text-sm animate-pulse pt-8 text-center">Loading results…</p>
         )}
 
         {/* Alliance Counter — LCP element, renders immediately via baked snapshot */}
         <section aria-label="National alliance tally">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">National Alliance Tally</h2>
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">National Alliance Tally</h2>
           <AllianceCounter nda={nda} india={india} oth={oth} totalSeats={824} />
         </section>
 
         {/* SVG Choropleth + donut side by side on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <section aria-label="State choropleth overview">
-            <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">5-State Overview</h2>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3">
+            <h2 className="text-muted text-xs uppercase tracking-wider mb-3">5-State Overview</h2>
+            <div className="bg-surface border border-border rounded-xl p-3">
               <OverviewSvgChoropleth snapshot={snapshot} />
-              <p className="text-zinc-600 text-xs text-center mt-2">Tap a state to drill in</p>
+              <p className="text-muted text-xs text-center mt-2">Tap a state to drill in</p>
             </div>
           </section>
 
           <section aria-label="National vote share">
-            <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">National Seat Share</h2>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3">
+            <h2 className="text-muted text-xs uppercase tracking-wider mb-3">National Seat Share</h2>
+            <div className="bg-surface border border-border rounded-xl p-3">
               <PartyDonut snapshot={snapshot} />
             </div>
           </section>
@@ -74,15 +74,15 @@ export default function OverviewPage() {
 
         {/* State-by-state stacked bar */}
         <section aria-label="Seats by state and party">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">Seats by State</h2>
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">Seats by State</h2>
+          <div className="bg-surface border border-border rounded-xl p-4">
             <StateStackedBar snapshot={snapshot} />
           </div>
         </section>
 
         {/* State quick-nav cards */}
         <section aria-label="Navigate to state results">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">States</h2>
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">States</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {[
               { code: 'S03', name: 'Assam',       seats: 126 },
@@ -98,21 +98,21 @@ export default function OverviewPage() {
                 <Link
                   key={code}
                   href={`/state/${code}`}
-                  className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 hover:border-zinc-600 transition-colors group"
+                  className="bg-surface border border-border rounded-xl p-3 hover:border-accent/30 transition-colors group"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="text-white font-semibold text-sm group-hover:text-zinc-100">{name}</p>
-                      <p className="text-zinc-600 text-xs mt-0.5">{seats} seats</p>
+                      <p className="text-fg font-medium text-sm group-hover:text-accent">{name}</p>
+                      <p className="text-muted text-xs mt-0.5">{seats} seats</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-white font-bold text-lg tabular-nums">{declared}</p>
-                      <p className="text-zinc-600 text-xs">declared</p>
+                      <p className="text-fg font-semibold text-lg tabular-nums">{declared}</p>
+                      <p className="text-muted text-xs">declared</p>
                     </div>
                   </div>
                   {leading && (
-                    <p className="text-zinc-400 text-xs mt-2">
-                      Leading: <span className="text-white font-medium">{leading[0]}</span>
+                    <p className="text-muted text-xs mt-2">
+                      Leading: <span className="text-fg font-medium">{leading[0]}</span>
                       {' '}<span className="tabular-nums">{leading[1]}</span>
                     </p>
                   )}
@@ -123,10 +123,10 @@ export default function OverviewPage() {
         </section>
       </main>
 
-      <footer className="sticky bottom-0 bg-[#0f0f0f]/95 backdrop-blur border-t border-zinc-800">
+      <footer className="sticky bottom-0 bg-bg/80 backdrop-blur border-t border-border">
         <SourcesStrip />
         <div className="px-4 py-2 flex items-center justify-between">
-          <span className="text-zinc-600 text-xs">electionwatch.saiteja.ai</span>
+          <span className="text-muted text-xs">electionwatch.saiteja.ai</span>
           {snapshot && <LiveIndicator asOf={snapshot.as_of} stale={snapshot.stale} />}
         </div>
       </footer>

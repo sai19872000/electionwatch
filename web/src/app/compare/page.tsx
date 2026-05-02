@@ -51,7 +51,7 @@ function useHistoricalData(cycle: HistoryCycle) {
 }
 
 function HistoricalSummaryRow({ data }: { data: HistoricalData | null }) {
-  if (!data) return <p className="text-zinc-600 text-sm">Loading historical data…</p>;
+  if (!data) return <p className="text-muted text-sm">Loading historical data…</p>;
   const byParty: Record<string, number> = {};
   for (const r of data.results) {
     byParty[r.winner_party] = (byParty[r.winner_party] ?? 0) + 1;
@@ -60,7 +60,7 @@ function HistoricalSummaryRow({ data }: { data: HistoricalData | null }) {
   return (
     <div className="flex flex-wrap gap-2">
       {entries.map(([party, wins]) => (
-        <span key={party} className="text-xs px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-300">
+        <span key={party} className="text-xs px-2.5 py-1 rounded-full bg-surface2 text-fg">
           {party}: <strong>{wins}</strong>
         </span>
       ))}
@@ -80,39 +80,39 @@ export default function ComparePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-20 bg-[#0f0f0f]/90 backdrop-blur border-b border-zinc-800 px-4 py-3 flex items-center gap-3">
-        <Link href="/" className="text-zinc-400 hover:text-white transition-colors text-sm" aria-label="Back to overview">
+      <header className="sticky top-0 z-20 bg-[#0A0E1A]/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
+        <Link href="/" className="text-muted hover:text-accent transition-colors text-sm" aria-label="Back to overview">
           ←
         </Link>
-        <h1 className="text-white font-bold text-base flex-1">Historical Overlay</h1>
+        <h1 className="text-fg font-light text-base flex-1">Historical Overlay</h1>
       </header>
 
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-5 space-y-6">
 
         {/* Cycle selector */}
         <section aria-label="Cycle selector">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 space-y-3">
-            <h2 className="text-zinc-400 text-xs uppercase tracking-wider">Comparison Cycle</h2>
+          <div className="bg-surface border border-border rounded-xl p-4 space-y-3">
+            <h2 className="text-muted text-xs uppercase tracking-wider">Comparison Cycle</h2>
             <HistoryOverlay
               activeCycle={activeCycle}
               onChange={setActiveCycle}
               deltaMode={deltaMode}
               onDeltaToggle={() => setDeltaMode((d) => !d)}
             />
-            <p className="text-zinc-600 text-xs border-t border-zinc-800 pt-3">{CYCLE_NOTES[activeCycle]}</p>
+            <p className="text-muted text-xs border-t border-border pt-3">{CYCLE_NOTES[activeCycle]}</p>
           </div>
         </section>
 
         {/* Live view (always shown) */}
         <section aria-label="Live results">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">2026 Live — Alliance Tally</h2>
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">2026 Live — Alliance Tally</h2>
           <AllianceCounter nda={nda} india={india} oth={oth} totalSeats={824} />
         </section>
 
         {/* Comparison view */}
         {activeCycle !== 'live' && (
-          <section aria-label="Historical results" className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 space-y-3">
-            <h2 className="text-zinc-400 text-xs uppercase tracking-wider">
+          <section aria-label="Historical results" className="bg-surface border border-border rounded-xl p-4 space-y-3">
+            <h2 className="text-muted text-xs uppercase tracking-wider">
               {activeCycle === 'ls_2024' ? '2024 Lok Sabha' : activeCycle === 'ls_2019' ? '2019 Lok Sabha' : '2021 Assembly'} — State-level Results
             </h2>
 
@@ -121,10 +121,10 @@ export default function ComparePage() {
             )}
 
             {activeCycle === 'assembly_2021' && (
-              <p className="text-zinc-500 text-sm">Assembly 2021 per-AC data baked by T1 data agent. Available after T1 completes.</p>
+              <p className="text-muted text-sm">Assembly 2021 per-AC data baked by T1 data agent. Available after T1 completes.</p>
             )}
 
-            <p className="text-zinc-700 text-xs pt-2 border-t border-zinc-800">
+            <p className="text-muted text-xs pt-2 border-t border-border">
               Note: LS constituency boundaries differ from assembly constituency boundaries.
               {' '}State-level seat rollups are used for cross-body comparison.
             </p>
@@ -133,23 +133,23 @@ export default function ComparePage() {
 
         {/* Current charts */}
         <section aria-label="Current party composition">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">Current — Party Seat Share</h2>
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">Current — Party Seat Share</h2>
+          <div className="bg-surface border border-border rounded-xl p-4">
             <PartyDonut snapshot={snapshot} />
           </div>
         </section>
 
         <section aria-label="State-level breakdown">
-          <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">Current — Seats by State</h2>
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
+          <h2 className="text-muted text-xs uppercase tracking-wider mb-3">Current — Seats by State</h2>
+          <div className="bg-surface border border-border rounded-xl p-4">
             <StateStackedBar snapshot={snapshot} />
           </div>
         </section>
 
         {deltaMode && activeCycle !== 'live' && (
-          <div className="bg-amber-900/20 border border-amber-700/40 rounded-xl p-4">
-            <p className="text-amber-400 text-sm font-medium">Δ mode active</p>
-            <p className="text-amber-400/70 text-xs mt-1">
+          <div className="bg-surface border border-warn rounded-xl p-4">
+            <p className="text-warn text-sm font-medium">Δ mode active</p>
+            <p className="text-warn text-xs mt-1 opacity-70">
               XOR diff highlights seats that changed party vs the selected cycle.
               Full diff map requires T1 data artifacts.
             </p>
@@ -157,10 +157,10 @@ export default function ComparePage() {
         )}
       </main>
 
-      <footer className="sticky bottom-0 bg-[#0f0f0f]/95 backdrop-blur border-t border-zinc-800">
+      <footer className="sticky bottom-0 bg-[#0A0E1A]/95 backdrop-blur border-t border-border">
         <SourcesStrip />
         <div className="px-4 py-2 flex items-center justify-between">
-          <span className="text-zinc-600 text-xs">electionwatch.saiteja.ai</span>
+          <span className="text-muted text-xs">electionwatch.saiteja.ai</span>
           {snapshot && <LiveIndicator asOf={snapshot.as_of} stale={snapshot.stale} />}
         </div>
       </footer>

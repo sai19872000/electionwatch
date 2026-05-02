@@ -52,17 +52,17 @@ export function StatePageClient({ code }: StatePageClientProps) {
         />
       )}
 
-      <header className="sticky top-0 z-20 bg-[#0f0f0f]/90 backdrop-blur border-b border-zinc-800 px-4 py-3 flex items-center gap-3">
+      <header className="sticky top-0 z-20 bg-[#0A0E1A]/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
         <Link
           href="/"
-          className="text-zinc-400 hover:text-white transition-colors text-sm flex-shrink-0"
+          className="text-muted hover:text-accent transition-colors text-sm flex-shrink-0"
           aria-label="Back to overview"
         >
           ←
         </Link>
-        <h1 className="text-white font-bold text-base flex-1 truncate">{stateName}</h1>
+        <h1 className="text-fg font-light text-base flex-1 truncate">{stateName}</h1>
         {stateSnap && (
-          <span className="text-zinc-500 text-xs flex-shrink-0 tabular-nums">
+          <span className="text-muted text-xs flex-shrink-0 tabular-nums">
             {stateSnap.declared}/{stateSnap.total_seats}
           </span>
         )}
@@ -74,10 +74,10 @@ export function StatePageClient({ code }: StatePageClientProps) {
         <section className="px-4 pt-4" aria-label={`${stateName} constituency map`}>
           <Suspense
             fallback={
-              <div className="w-full h-[360px] sm:h-[480px] rounded-xl bg-zinc-900 flex items-center justify-center animate-pulse">
+              <div className="w-full h-[360px] sm:h-[480px] rounded-xl bg-surface flex items-center justify-center animate-pulse">
                 <div className="space-y-2 w-full px-8">
                   {[80, 60, 75, 50, 65].map((w, i) => (
-                    <div key={i} className="h-6 rounded bg-zinc-800" style={{ width: `${w}%` }} />
+                    <div key={i} className="h-6 rounded bg-surface2" style={{ width: `${w}%` }} />
                   ))}
                 </div>
               </div>
@@ -93,8 +93,8 @@ export function StatePageClient({ code }: StatePageClientProps) {
 
         {/* Historical comparison toggle */}
         <section className="px-4" aria-label="Historical comparison">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-            <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">Historical Comparison</h2>
+          <div className="bg-surface border border-border rounded-xl p-4">
+            <h2 className="text-muted text-xs uppercase tracking-wider mb-3">Historical Comparison</h2>
             <HistoryOverlay
               activeCycle={historyCycle}
               onChange={setHistoryCycle}
@@ -107,8 +107,8 @@ export function StatePageClient({ code }: StatePageClientProps) {
         {/* Party breakdown bar for this state */}
         {snapshot && (
           <section className="px-4" aria-label="Party seat breakdown">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-              <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">Party Breakdown</h2>
+            <div className="bg-surface border border-border rounded-xl p-4">
+              <h2 className="text-muted text-xs uppercase tracking-wider mb-3">Party Breakdown</h2>
               <StateStackedBar snapshot={snapshot} />
             </div>
           </section>
@@ -117,13 +117,13 @@ export function StatePageClient({ code }: StatePageClientProps) {
         {/* Virtualized constituency list */}
         <section aria-label="All constituencies">
           {isLoading && !stateData && (
-            <p className="text-zinc-500 text-sm p-4 animate-pulse">Loading constituencies…</p>
+            <p className="text-muted text-sm p-4 animate-pulse">Loading constituencies…</p>
           )}
           {stateData && (
-            <div className="border-t border-zinc-800">
-              <div className="px-4 py-3 flex items-center gap-3 text-sm text-zinc-500 border-b border-zinc-800">
+            <div className="border-t border-border">
+              <div className="px-4 py-3 flex items-center gap-3 text-sm text-muted border-b border-border">
                 <span>{stateData.constituencies.length} constituencies</span>
-                <span className="text-zinc-700">·</span>
+                <span className="text-muted">·</span>
                 <span>{stateData.constituencies.filter((c) => c.status === 'declared').length} declared</span>
               </div>
               <ConstituencyList constituencies={stateData.constituencies} />
@@ -132,10 +132,10 @@ export function StatePageClient({ code }: StatePageClientProps) {
         </section>
       </main>
 
-      <footer className="sticky bottom-0 bg-[#0f0f0f]/95 backdrop-blur border-t border-zinc-800">
+      <footer className="sticky bottom-0 bg-[#0A0E1A]/95 backdrop-blur border-t border-border">
         <SourcesStrip />
         <div className="px-4 py-2 flex items-center justify-between">
-          <span className="text-zinc-600 text-xs">electionwatch.saiteja.ai</span>
+          <span className="text-muted text-xs">electionwatch.saiteja.ai</span>
           {snapshot && <LiveIndicator asOf={snapshot.as_of} stale={snapshot.stale} />}
         </div>
       </footer>

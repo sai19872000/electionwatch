@@ -71,7 +71,8 @@ export function OverviewSvgChoropleth({ snapshot }: OverviewSvgChoroplethProps) 
   const getStateFill = useCallback((code: string): string => {
     const stateData = snapshot?.states[code];
     const alliance = leadingAlliance(stateData);
-    if (!alliance) return '#2d2d2d';
+    // Aura --surface-2 token (#161B2A) for states with no data yet
+    if (!alliance) return '#161B2A';
     return ALLIANCE_COLORS[alliance];
   }, [snapshot]);
 
@@ -105,7 +106,7 @@ export function OverviewSvgChoropleth({ snapshot }: OverviewSvgChoroplethProps) 
                 d={d}
                 fill={fill}
                 fillOpacity={opacity}
-                stroke="#3f3f3f"
+                stroke="rgba(255,255,255,0.08)"
                 strokeWidth="1"
                 className="transition-all duration-500 cursor-pointer hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-white/30"
                 onClick={() => router.push(`/state/${code}`)}
@@ -120,9 +121,9 @@ export function OverviewSvgChoropleth({ snapshot }: OverviewSvgChoroplethProps) 
                 x={labelXY[0]}
                 y={labelXY[1]}
                 textAnchor="middle"
-                fill="#a1a1aa"
+                fill="var(--muted)"
                 fontSize={code === 'U06' ? '8' : '11'}
-                fontFamily="Manrope, system-ui"
+                fontFamily="Geist, system-ui"
                 className="pointer-events-none select-none"
               >
                 {code === 'U06' ? 'PY' : code === 'S03' ? 'AS' : code === 'S11' ? 'KL' : code === 'S22' ? 'TN' : 'WB'}

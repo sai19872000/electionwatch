@@ -36,11 +36,11 @@ export function ConstituencyRow({ constituency: c, style }: ConstituencyRowProps
   const statusBadge: { label: string; className: string } | null = (() => {
     switch (c.status) {
       case 'declared':
-        return { label: 'Declared', className: 'bg-emerald-900/60 text-emerald-400' };
+        return { label: 'Declared', className: 'bg-ok/15 text-ok' };
       case 'counting':
-        return { label: 'Counting', className: 'bg-amber-900/60 text-amber-400' };
+        return { label: 'Counting', className: 'bg-warn/15 text-warn' };
       case 'pending':
-        return { label: 'Pending', className: 'bg-zinc-800 text-zinc-400' };
+        return { label: 'Pending', className: 'bg-surface2 text-muted' };
       case 'leading':
         return null;
     }
@@ -54,20 +54,20 @@ export function ConstituencyRow({ constituency: c, style }: ConstituencyRowProps
       }}
       animate={{ backgroundColor: flash ? flashColor + '22' : 'transparent' }}
       transition={{ duration: 0.3 }}
-      className="flex items-center gap-3 px-4 py-2.5 border-b border-zinc-800/60 hover:bg-zinc-800/40 transition-colors"
+      className="flex items-center gap-3 px-4 py-2.5 border-b border-border/60 hover:bg-surface2/40 transition-colors"
     >
-      <span className="text-zinc-600 text-xs w-8 flex-shrink-0">{c.ac_no}</span>
+      <span className="text-muted text-xs w-8 flex-shrink-0">{c.ac_no}</span>
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-1.5">
-          <p className="text-white text-sm font-medium truncate">{c.name}</p>
+          <p className="text-fg text-sm font-medium truncate">{c.name}</p>
           {statusBadge && (
             <span className={`text-xs ${statusBadge.className} px-1.5 py-0.5 rounded text-nowrap`}>
               {statusBadge.label}
             </span>
           )}
         </div>
-        <p className="text-zinc-500 text-xs truncate">{c.leading_candidate}</p>
+        <p className="text-muted text-xs truncate">{c.leading_candidate}</p>
       </div>
 
       <div className="flex flex-col items-end gap-1 flex-shrink-0">
@@ -80,17 +80,17 @@ export function ConstituencyRow({ constituency: c, style }: ConstituencyRowProps
             {c.leading_party}
           </span>
           {c.leading_margin > 0 && (
-            <span className="text-zinc-500 text-xs">+{c.leading_margin.toLocaleString()}</span>
+            <span className="text-muted text-xs">+{c.leading_margin.toLocaleString()}</span>
           )}
         </div>
         <div className="flex items-center gap-1">
-          <div className="w-16 h-1 bg-zinc-800 rounded-full overflow-hidden">
+          <div className="w-16 h-1 bg-surface2 rounded-full overflow-hidden">
             <div
               className="h-full rounded-full transition-all duration-500"
               style={{ width: `${roundPct}%`, backgroundColor: partyColor }}
             />
           </div>
-          <span className="text-zinc-600 text-xs">
+          <span className="text-muted text-xs">
             {roundsUnknown ? '?' : `${c.rounds_completed}/${c.rounds_total}`}
           </span>
         </div>

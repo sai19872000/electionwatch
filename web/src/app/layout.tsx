@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { CountdownBanner } from '@/components/CountdownBanner';
+import { RootClient } from '@/components/aura/RootClient';
 
 export const metadata: Metadata = {
   title: {
@@ -17,10 +18,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-[#0f0f0f] text-white min-h-screen font-sans antialiased">
+    <html lang="en" data-theme="dark">
+      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased">
         <CountdownBanner />
-        {children}
+        <RootClient>
+          {children}
+        </RootClient>
       </body>
     </html>
   );

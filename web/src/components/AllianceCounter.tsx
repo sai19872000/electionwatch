@@ -37,7 +37,7 @@ function CounterCard({ label, value, color, totalSeats, pulsing }: CounterCardPr
       <AnimatedNumber
         value={value}
         className="text-4xl font-extrabold tabular-nums leading-none"
-        style={{ color: '#fff' }}
+        style={{ color: 'var(--fg)' }}
       />
       {hasMajority && (
         <span className="text-xs mt-1 font-semibold px-2 py-0.5 rounded-full self-start" style={{ backgroundColor: color + '33', color }}>
@@ -101,7 +101,7 @@ export function AllianceCounter({ nda, india, oth, totalSeats = 824 }: AllianceC
 
       {/* 824-seat stacked progress bar */}
       <div
-        className="flex h-2 w-full rounded-full overflow-hidden bg-zinc-800"
+        className="flex h-2 w-full rounded-full overflow-hidden bg-surface2"
         role="meter"
         aria-label="Seat share progress"
         aria-valuenow={total}
@@ -119,13 +119,13 @@ export function AllianceCounter({ nda, india, oth, totalSeats = 824 }: AllianceC
         ))}
         {undeclared > 0 && (
           <div
-            className="h-full bg-zinc-700"
+            className="h-full bg-border"
             style={{ width: `${(undeclared / totalSeats) * 100}%` }}
           />
         )}
       </div>
 
-      <div className="flex items-center justify-between text-xs text-zinc-500">
+      <div className="flex items-center justify-between text-xs text-muted">
         <span>{total} / {totalSeats} seats</span>
         <span>{undeclared} pending</span>
       </div>

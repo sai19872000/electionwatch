@@ -67,7 +67,7 @@ export function PartyDonut({ snapshot }: PartyDonutProps) {
 
   if (data.length === 0) {
     return (
-      <div className="flex items-center justify-center h-40 text-zinc-600 text-sm">
+      <div className="flex items-center justify-center h-40 text-muted text-sm">
         Results pending…
       </div>
     );
@@ -94,16 +94,16 @@ export function PartyDonut({ snapshot }: PartyDonutProps) {
             ))}
           </Pie>
           <Tooltip
-            contentStyle={{ backgroundColor: '#191919', border: '1px solid #3f3f3f', borderRadius: '8px', fontSize: '12px' }}
-            labelStyle={{ color: '#fff' }}
-            itemStyle={{ color: '#a1a1aa' }}
+            contentStyle={{ backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '12px' }}
+            labelStyle={{ color: 'var(--fg)' }}
+            itemStyle={{ color: 'var(--muted)' }}
             formatter={(value) => [`${value} seats`]}
           />
           <Legend
             iconType="circle"
             iconSize={8}
             wrapperStyle={{ fontSize: '11px', paddingTop: '8px' }}
-            formatter={(value) => <span style={{ color: '#a1a1aa' }}>{value}</span>}
+            formatter={(value) => <span style={{ color: 'var(--muted)' }}>{value}</span>}
           />
         </PieChart>
       </ResponsiveContainer>

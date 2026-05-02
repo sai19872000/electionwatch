@@ -22,20 +22,20 @@ export function StateCard({ code, data, watchdogMinimal }: StateCardProps) {
 
   return (
     <Link href={`/state/${code}`} className="block">
-      <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 hover:border-zinc-600 transition-colors cursor-pointer">
+      <div className="bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-colors cursor-pointer">
         <div className="flex items-start justify-between mb-3">
           <div>
-            <h2 className="text-white font-semibold text-base">{data.name}</h2>
-            <p className="text-zinc-500 text-xs mt-0.5">{data.total_seats} seats</p>
+            <h2 className="text-fg font-medium text-base">{data.name}</h2>
+            <p className="text-muted text-xs mt-0.5">{data.total_seats} seats</p>
           </div>
           <div className="text-right">
-            <p className="text-zinc-400 text-xs">Declared</p>
-            <AnimatedNumber value={data.declared} className="text-white font-bold text-lg" />
+            <p className="text-muted text-xs">Declared</p>
+            <AnimatedNumber value={data.declared} className="text-fg font-semibold text-lg" />
           </div>
         </div>
 
         {watchdogMinimal ? (
-          <p className="text-zinc-400 text-sm">
+          <p className="text-muted text-sm">
             <AnimatedNumber value={totalCounted} /> seats counted
           </p>
         ) : (
@@ -46,8 +46,8 @@ export function StateCard({ code, data, watchdogMinimal }: StateCardProps) {
                   className="inline-block w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: getPartyColor(party) }}
                 />
-                <span className="text-zinc-300 text-xs w-16 truncate">{party}</span>
-                <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                <span className="text-muted text-xs w-16 truncate">{party}</span>
+                <div className="flex-1 h-1.5 bg-surface2 rounded-full overflow-hidden">
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{
@@ -58,7 +58,7 @@ export function StateCard({ code, data, watchdogMinimal }: StateCardProps) {
                 </div>
                 <AnimatedNumber
                   value={seats}
-                  className="text-white text-xs font-semibold tabular-nums w-6 text-right"
+                  className="text-fg text-xs font-semibold tabular-nums w-6 text-right"
                 />
               </div>
             ))}

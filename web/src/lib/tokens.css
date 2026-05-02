@@ -1,57 +1,69 @@
 /**
- * Design tokens for ElectionWatch — dark-first.
- * Vendored from the design brief (Manrope primary, dark surface).
+ * Design tokens for ElectionWatch — Aura-based, dark-first.
+ * Canonical palette: dashboard-saiteja Aura standard (approved 2026-05-01).
  * Reference these custom properties in all components; never hard-code
  * hex values in component files.
+ *
+ * Alliance colors are election-domain semantics (ECI), NOT brand tokens.
+ * Do NOT replace them with Aura accent palette.
  */
 
 :root {
-  /* Surfaces */
-  --ew-bg:           #0f0f0f;
-  --ew-bg-card:      #191919;
-  --ew-bg-elevated:  #222222;
-  --ew-border:       #2d2d2d;
+  /* === Aura Core Palette === */
+  --bg:           #0A0E1A;
+  --fg:           #E8EAF0;
+  --muted:        #6B7080;
+  --accent:       #8AB6FF;
+  --accent-deep:  #3A6CFF;
+  --border:       rgba(255, 255, 255, 0.08);
+  --danger:       #FF6B6B;
+  --warn:         #F5A623;
+  --ok:           #4CAF87;
+  --surface:      #10141F;
+  --surface-2:    #161B2A;
 
-  /* Text */
-  --ew-text-primary:  #ffffff;
-  --ew-text-secondary: #a1a1aa;   /* zinc-400 */
-  --ew-text-muted:    #52525b;    /* zinc-600 */
+  /* === Radii === */
+  --r-sm:   4px;
+  --r-md:   6px;
+  --r-lg:   8px;
+  --r-xl:   16px;
+  --r-pill: 100px;
 
-  /* Alliance */
-  --ew-nda:    #FF9933;
-  --ew-india:  #19A3DC;
-  --ew-oth:    #6B7280;
+  /* === Spacing (4-pt base) === */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-24: 96px;
 
-  /* Status */
-  --ew-live:   #4ade80;
-  --ew-stale:  #fbbf24;
-  --ew-error:  #f87171;
+  /* === Motion === */
+  --duration-fast:  120ms;
+  --duration-base:  220ms;
+  --duration-slow:  480ms;
+  --ease-standard:  cubic-bezier(0.22, 0.61, 0.36, 1);
 
-  /* Motion */
-  --ew-transition-fast:   150ms ease;
-  --ew-transition-mid:    300ms ease;
-  --ew-transition-slow:   700ms ease;
+  /* === Alliance (Election-domain semantics — ECI, not brand) === */
+  --alliance-nda:   #FF9933;
+  --alliance-india: #19A3DC;
+  --alliance-oth:   #6B7280;
 
-  /* Spacing scale (4-pt base) */
-  --ew-space-1: 0.25rem;
-  --ew-space-2: 0.5rem;
-  --ew-space-3: 0.75rem;
-  --ew-space-4: 1rem;
-  --ew-space-6: 1.5rem;
-  --ew-space-8: 2rem;
+  /* === Status === */
+  --status-live:  #4CAF87;
+  --status-stale: #F5A623;
+  --status-error: #FF6B6B;
+}
 
-  /* Radii */
-  --ew-radius-sm:  0.5rem;
-  --ew-radius-md:  0.75rem;
-  --ew-radius-lg:  1rem;
-  --ew-radius-full: 9999px;
-
-  /* Type scale */
-  --ew-font-xs:   0.75rem;   /* 12px */
-  --ew-font-sm:   0.875rem;  /* 14px */
-  --ew-font-base: 1rem;      /* 16px */
-  --ew-font-lg:   1.125rem;  /* 18px */
-  --ew-font-xl:   1.25rem;   /* 20px */
-  --ew-font-2xl:  1.5rem;    /* 24px */
-  --ew-font-3xl:  1.875rem;  /* 30px */
+[data-theme="light"] {
+  --bg:          #F5F4F0;
+  --fg:          #0A0E1A;
+  --muted:       #7A7E8A;
+  --accent:      #3A6CFF;
+  --accent-deep: #1A3BCC;
+  --border:      rgba(0, 0, 0, 0.08);
+  --surface:     #FFFFFF;
+  --surface-2:   #F0EEE9;
 }

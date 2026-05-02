@@ -32,18 +32,18 @@ export function LiveIndicator({ asOf, stale }: LiveIndicatorProps) {
 
   return (
     <div
-      className="flex items-center gap-2 text-xs text-zinc-400"
+      className="flex items-center gap-2 text-xs text-muted"
       aria-live="polite"
       aria-label={`Last updated ${relTime}`}
     >
       <span
         className={`inline-block w-2 h-2 rounded-full ${
-          isLive && !stale ? 'bg-green-400 animate-pulse' : 'bg-amber-400'
+          isLive && !stale ? 'bg-ok animate-pulse' : 'bg-warn'
         }`}
       />
       <span>
         Updated {relTime} •{' '}
-        <span className={isLive && !stale ? 'text-green-400' : 'text-amber-400'}>
+        <span className={isLive && !stale ? 'text-ok' : 'text-warn'}>
           {isLive && !stale ? 'LIVE' : 'STALE'}
         </span>
       </span>
