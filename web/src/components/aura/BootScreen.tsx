@@ -23,15 +23,8 @@ export function BootScreen({ onDone }: BootScreenProps) {
       return () => clearTimeout(t);
     }
 
-    // Normal: min 200ms display, then fade out (480ms), then done
-    const minDisplay = 200;
+    // Normal: 700ms total (fade-out handled by AnimatePresence exit at 480ms)
     const maxDisplay = 700;
-
-    const t = setTimeout(() => {
-      if (!doneCalledRef.current) {
-        // Fade out handled by AnimatePresence — we just call onDone after fade
-      }
-    }, minDisplay);
 
     const tDone = setTimeout(() => {
       if (!doneCalledRef.current) {
@@ -41,7 +34,6 @@ export function BootScreen({ onDone }: BootScreenProps) {
     }, maxDisplay);
 
     return () => {
-      clearTimeout(t);
       clearTimeout(tDone);
     };
   }, [onDone, prefersReducedMotion]);

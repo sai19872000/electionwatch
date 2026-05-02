@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useStateData } from '@/hooks/useStateData';
 import { useSnapshot } from '@/hooks/useSnapshot';
-import { partyColor } from '@/lib/party-colors';
+import { partyColor, UNKNOWN_COLOR } from '@/lib/party-colors';
 import { StaleBanner } from '@/components/StaleBanner';
 import { LiveIndicator } from '@/components/LiveIndicator';
 import { SourcesStrip } from '@/components/SourcesStrip';
@@ -116,7 +116,7 @@ export function AcDetailClient({ id }: AcDetailClientProps) {
 
   const c: Constituency | undefined = stateData?.constituencies.find((x) => x.ac_no === acNo);
   const stateName = STATE_NAMES[stateCode] ?? stateCode;
-  const color = c ? partyColor(c.leading_party) : '#6B7280';
+  const color = c ? partyColor(c.leading_party) : UNKNOWN_COLOR;
   const isDecided = c?.status === 'declared';
   const candidates = c ? buildCandidatesFromConstituency(c) : [];
 
@@ -149,7 +149,7 @@ export function AcDetailClient({ id }: AcDetailClientProps) {
       )}
 
       {/* Header */}
-      <header className="sticky top-0 z-20 bg-[#0A0E1A]/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
+      <header className="sticky top-0 z-20 bg-bg/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
         <Link
           href={`/state/${stateCode}`}
           className="text-muted hover:text-accent transition-colors text-sm flex-shrink-0"
@@ -267,7 +267,7 @@ export function AcDetailClient({ id }: AcDetailClientProps) {
         </div>
       )}
 
-      <footer className="bg-[#0A0E1A]/95 border-t border-border">
+      <footer className="bg-bg/95 border-t border-border">
         <SourcesStrip />
         <div className="px-4 py-2 flex items-center justify-between">
           <span className="text-muted text-xs">electionwatch.saiteja.ai</span>

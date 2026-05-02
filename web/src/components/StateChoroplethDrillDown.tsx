@@ -87,9 +87,7 @@ export function StateChoroplethDrillDown({
           if (!res.ok) throw new Error('TopoJSON not found');
           const topojson = await res.json();
 
-          // Convert TopoJSON to GeoJSON using the topojson-client library
-          // We do a minimal inline conversion for MVP since topojson-client is not installed.
-          // T1 will serve pre-converted GeoJSON; for now we handle the stub case.
+          // Convert TopoJSON topology to GeoJSON using topojson-client (dynamic import).
           const geojson = await topoJsonToGeoJson(topojson);
 
           (map as any).addSource('constituencies', {

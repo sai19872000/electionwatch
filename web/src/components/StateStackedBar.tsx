@@ -10,7 +10,7 @@ import {
   Cell,
   LabelList,
 } from 'recharts';
-import { partyColor } from '@/lib/party-colors';
+import { partyColor, UNKNOWN_COLOR } from '@/lib/party-colors';
 import type { Snapshot } from '@/lib/types';
 
 const STATE_LABELS: Record<string, string> = {
@@ -94,7 +94,7 @@ export function StateStackedBar({ snapshot }: { snapshot: Snapshot | undefined }
               {data.map((entry) => (
                 <Cell
                   key={`${entry.state}-${party}`}
-                  fill={party === 'Others' ? '#52525b' : partyColor(party)}
+                  fill={party === 'Others' ? UNKNOWN_COLOR : partyColor(party)}
                 />
               ))}
             </Bar>

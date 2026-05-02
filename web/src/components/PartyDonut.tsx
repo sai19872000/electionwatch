@@ -1,7 +1,7 @@
 'use client';
 
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { partyColor, DONUT_PARTY_ORDER } from '@/lib/party-colors';
+import { partyColor, DONUT_PARTY_ORDER, UNKNOWN_COLOR } from '@/lib/party-colors';
 import type { Snapshot } from '@/lib/types';
 
 interface PartyDonutProps {
@@ -55,7 +55,7 @@ function buildDonutData(snapshot: Snapshot | undefined): DonutEntry[] {
   }
 
   if (othersTotal > 0) {
-    entries.push({ name: 'Others', value: othersTotal, color: '#52525b' });
+    entries.push({ name: 'Others', value: othersTotal, color: UNKNOWN_COLOR });
   }
 
   return entries;
