@@ -91,7 +91,7 @@ export function ConstituencyPageClient({ id }: ConstituencyPageClientProps) {
         />
       )}
 
-      <header className="sticky top-0 z-20 bg-bg/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
+      <header className="sticky top-0 z-20 bg-[#0A0E1A]/90 backdrop-blur border-b border-border px-4 py-3 flex items-center gap-3">
         <Link href={`/state/${stateCode}`} className="text-muted hover:text-accent transition-colors text-sm">
           ← Back
         </Link>
@@ -160,7 +160,7 @@ export function ConstituencyPageClient({ id }: ConstituencyPageClientProps) {
         )}
       </main>
 
-      <footer className="sticky bottom-0 bg-bg/95 backdrop-blur border-t border-border">
+      <footer className="sticky bottom-0 bg-[#0A0E1A]/95 backdrop-blur border-t border-border">
         <SourcesStrip />
         <div className="px-4 py-2 flex items-center justify-between">
           <span className="text-muted text-xs">electionwatch.saiteja.ai</span>
