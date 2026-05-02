@@ -32,13 +32,13 @@ export function ConstituencyList({ constituencies }: ConstituencyListProps) {
   return (
     <div className="flex flex-col h-full">
       {/* Controls */}
-      <div className="flex gap-2 p-3 border-b border-zinc-800 flex-wrap">
+      <div className="flex gap-2 p-3 border-b border-border flex-wrap">
         <input
           type="search"
           placeholder="Search constituency…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 min-w-32 bg-zinc-800 text-white text-sm rounded-lg px-3 py-1.5 border border-zinc-700 focus:outline-none focus:border-zinc-500 placeholder:text-zinc-600"
+          className="flex-1 min-w-32 bg-surface2 text-fg text-sm rounded-lg px-3 py-1.5 border border-border focus:outline-none focus:border-accent/60 placeholder:text-muted"
         />
         {(['all', 'leading', 'declared'] as StatusFilter[]).map((f) => (
           <button
@@ -46,8 +46,8 @@ export function ConstituencyList({ constituencies }: ConstituencyListProps) {
             onClick={() => setFilter(f)}
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
               filter === f
-                ? 'bg-zinc-100 text-zinc-900'
-                : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
+                ? 'bg-fg text-bg'
+                : 'bg-surface2 text-muted hover:bg-surface2/80'
             }`}
           >
             {f.charAt(0).toUpperCase() + f.slice(1)}
@@ -57,7 +57,7 @@ export function ConstituencyList({ constituencies }: ConstituencyListProps) {
 
       {/* Virtualized list */}
       {filtered.length === 0 ? (
-        <p className="text-zinc-500 text-sm p-4">No constituencies match your filter.</p>
+        <p className="text-muted text-sm p-4">No constituencies match your filter.</p>
       ) : (
         <FixedSizeList
           height={520}
@@ -68,7 +68,7 @@ export function ConstituencyList({ constituencies }: ConstituencyListProps) {
           {Row}
         </FixedSizeList>
       )}
-      <p className="text-zinc-600 text-xs p-2 text-right">{filtered.length} of {constituencies.length} shown</p>
+      <p className="text-muted text-xs p-2 text-right">{filtered.length} of {constituencies.length} shown</p>
     </div>
   );
 }

@@ -23,8 +23,8 @@ export function AllianceView({ india, nda, oth }: AllianceViewProps) {
   ];
 
   return (
-    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-      <h2 className="text-zinc-400 text-xs uppercase tracking-wider mb-3">National Alliance View</h2>
+    <div className="bg-surface border border-border rounded-xl p-4">
+      <h2 className="text-muted text-xs uppercase tracking-wider mb-3">National Alliance View</h2>
       <div className="flex gap-1 h-3 rounded-full overflow-hidden mb-3">
         {items.map(({ label, value }) => (
           <div
@@ -44,8 +44,8 @@ export function AllianceView({ india, nda, oth }: AllianceViewProps) {
               className="w-2 h-2 rounded-full"
               style={{ backgroundColor: ALLIANCE_COLORS[label] }}
             />
-            <span className="text-zinc-400 text-xs">{label}</span>
-            <AnimatedNumber value={value} className="text-white text-sm font-bold tabular-nums" />
+            <span className="text-muted text-xs">{label}</span>
+            <AnimatedNumber value={value} className="text-fg text-sm font-semibold tabular-nums" />
           </div>
         ))}
       </div>

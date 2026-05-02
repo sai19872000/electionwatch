@@ -35,13 +35,13 @@ export function CountdownBanner() {
     <div
       role="status"
       aria-live="polite"
-      className="w-full bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-700 border-b border-emerald-500 px-4 py-3 text-white text-center"
+      className="w-full bg-ok/10 border-b border-ok/30 px-4 py-3 text-fg text-center"
     >
       <p className="text-sm sm:text-base font-semibold tracking-tight">
         Counting starts May 4 — live data will populate automatically
       </p>
       <p
-        className="mt-1 text-xs sm:text-sm font-mono tabular-nums text-emerald-100"
+        className="mt-1 text-xs sm:text-sm font-mono tabular-nums text-ok/80"
         suppressHydrationWarning
         aria-label={
           t
@@ -59,7 +59,7 @@ export function CountdownBanner() {
         ) : (
           <span className="font-bold">— d — h — m — s</span>
         )}
-        <span className="ml-2 text-emerald-200/80">until 08:00 IST · May 4, 2026</span>
+        <span className="ml-2 text-ok/60">until 08:00 IST · May 4, 2026</span>
       </p>
     </div>
   );

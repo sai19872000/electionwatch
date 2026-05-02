@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation';
 import { partyColor, OPACITY } from '@/lib/party-colors';
 import type { StateDetail } from '@/lib/types';
 
-const BASE = process.env.NEXT_PUBLIC_DATA_BASE ?? '/fixtures';
+// TopoJSON shards are public static assets served at /static/, not API fixtures.
+// Use root-relative path so this works in dev, preview, and production alike.
+const STATIC = '/static';
 
 // MapLibre GL JS is lazy-imported so WebGL init (~200KB gz core) only runs
 // on /state/[code] pages, not the overview. This is the ADR D-7 split-tech
@@ -65,7 +67,8 @@ export function StateChoroplethDrillDown({
             {
               id: 'background',
               type: 'background',
-              paint: { 'background-color': '#191919' },
+              // Aura --surface token value (#10141F)
+              paint: { 'background-color': '#10141F' },
             },
           ],
         },
@@ -77,17 +80,15 @@ export function StateChoroplethDrillDown({
       mapInstanceRef.current = map;
 
       map.on('load', async () => {
-        // Load per-state TopoJSON shard on demand
-        const topoUrl = `${BASE}/static/india_constituencies_${stateCode}.topojson`;
+        // Load per-state TopoJSON shard on demand (logical unhashed name written by copy-static.mjs)
+        const topoUrl = `${STATIC}/india_constituencies_${stateCode}.topojson`;
         try {
           const res = await fetch(topoUrl);
           if (!res.ok) throw new Error('TopoJSON not found');
           const topojson = await res.json();
 
-          // Convert TopoJSON to GeoJSON using the topojson-client library
-          // We do a minimal inline conversion for MVP since topojson-client is not installed.
-          // T1 will serve pre-converted GeoJSON; for now we handle the stub case.
-          const geojson = topoJsonToGeoJson(topojson);
+          // Convert TopoJSON topology to GeoJSON using topojson-client (dynamic import).
+          const geojson = await topoJsonToGeoJson(topojson);
 
           (map as any).addSource('constituencies', {
             type: 'geojson',
@@ -118,7 +119,8 @@ export function StateChoroplethDrillDown({
             type: 'line',
             source: 'constituencies',
             paint: {
-              'line-color': '#3f3f3f',
+              // Aura --border token: rgba(255,255,255,0.08)
+              'line-color': 'rgba(255,255,255,0.08)',
               'line-width': 0.5,
             },
           });
@@ -194,17 +196,17 @@ export function StateChoroplethDrillDown({
   }, [stateData]);
 
   return (
-    <div className="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden bg-zinc-900">
+    <div className="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden bg-surface border border-border">
       <div ref={mapRef} className="absolute inset-0" />
 
       {/* CSS skeleton while MapLibre boots */}
       {!mapLibreLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
+        <div className="absolute inset-0 flex items-center justify-center bg-surface">
           <div className="space-y-2 w-full px-8">
             {[80, 60, 75, 50, 65].map((w, i) => (
               <div
                 key={i}
-                className="h-6 rounded bg-zinc-800 animate-pulse"
+                className="h-6 rounded bg-surface2 animate-pulse"
                 style={{ width: `${w}%` }}
               />
             ))}
@@ -213,37 +215,42 @@ export function StateChoroplethDrillDown({
       )}
 
       {error && (
-        <div className="absolute inset-0 flex items-center justify-center text-zinc-500 text-sm">
+        <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
           {error}
         </div>
       )}
 
       {tooltip && (
         <div
-          className="absolute z-20 bg-zinc-900/95 border border-zinc-700 rounded-lg px-3 py-2 pointer-events-none shadow-xl text-xs"
+          className="absolute z-20 bg-surface2/95 border border-border rounded-lg px-3 py-2 pointer-events-none shadow-xl text-xs text-fg"
           style={{ left: tooltip.x + 12, top: tooltip.y - 12, transform: 'translateY(-100%)' }}
         >
-          <p className="text-white font-semibold">{tooltip.name}</p>
-          <p className="text-zinc-400">
+          <p className="font-semibold">{tooltip.name}</p>
+          <p className="text-muted">
             {tooltip.party === '—' ? 'Pending' : tooltip.party} · {tooltip.status}
           </p>
         </div>
       )}
 
-      <div className="absolute bottom-2 right-2 text-zinc-700 text-xs">
+      <div className="absolute bottom-2 right-2 text-muted text-xs">
         Map: DataMeet CC0 boundaries
       </div>
     </div>
   );
 }
 
-// Minimal TopoJSON → GeoJSON for the MVP stub case.
-// T1 will bake pre-converted GeoJSON shards, making this unreachable.
-function topoJsonToGeoJson(topojson: any): GeoJSON.FeatureCollection {
-  // If already GeoJSON (T1 may bake it this way for simplicity)
-  if (topojson.type === 'FeatureCollection') return topojson;
-  // Minimal TopoJSON passthrough for empty/stub case
-  return { type: 'FeatureCollection', features: [] };
+// Convert TopoJSON → GeoJSON using topojson-client (dynamically imported).
+// Falls back to empty FeatureCollection if the topology has no objects.
+async function topoJsonToGeoJson(topology: any): Promise<GeoJSON.FeatureCollection> {
+  // Pass-through if the data pipeline ever serves pre-converted GeoJSON
+  if (topology.type === 'FeatureCollection') return topology as GeoJSON.FeatureCollection;
+
+  // Real TopoJSON: use topojson-client to convert the first object layer
+  const { feature } = await import('topojson-client');
+  const objectKey = Object.keys(topology.objects ?? {})[0];
+  if (!objectKey) return { type: 'FeatureCollection', features: [] };
+
+  return feature(topology, topology.objects[objectKey]) as unknown as GeoJSON.FeatureCollection;
 }
 
 function computeBounds(features: GeoJSON.Feature[]): [[number, number], [number, number]] | null {

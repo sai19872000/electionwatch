@@ -10,7 +10,7 @@ import {
   Cell,
   LabelList,
 } from 'recharts';
-import { partyColor } from '@/lib/party-colors';
+import { partyColor, UNKNOWN_COLOR } from '@/lib/party-colors';
 import type { Snapshot } from '@/lib/types';
 
 const STATE_LABELS: Record<string, string> = {
@@ -52,7 +52,7 @@ export function StateStackedBar({ snapshot }: { snapshot: Snapshot | undefined }
 
   if (!hasData) {
     return (
-      <div className="flex items-center justify-center h-32 text-zinc-600 text-sm">
+      <div className="flex items-center justify-center h-32 text-muted text-sm">
         Results pending…
       </div>
     );
@@ -69,22 +69,22 @@ export function StateStackedBar({ snapshot }: { snapshot: Snapshot | undefined }
         >
           <XAxis
             type="number"
-            tick={{ fill: '#52525b', fontSize: 10 }}
+            tick={{ fill: 'var(--muted)', fontSize: 10 }}
             axisLine={false}
             tickLine={false}
           />
           <YAxis
             type="category"
             dataKey="state"
-            tick={{ fill: '#a1a1aa', fontSize: 11, fontFamily: 'Manrope, system-ui' }}
+            tick={{ fill: 'var(--fg)', fontSize: 11, fontFamily: 'Geist, system-ui' }}
             axisLine={false}
             tickLine={false}
             width={24}
           />
           <Tooltip
-            contentStyle={{ backgroundColor: '#191919', border: '1px solid #3f3f3f', borderRadius: '8px', fontSize: '12px' }}
-            labelStyle={{ color: '#fff', fontWeight: 600 }}
-            itemStyle={{ color: '#a1a1aa' }}
+            contentStyle={{ backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '12px' }}
+            labelStyle={{ color: 'var(--fg)', fontWeight: 600 }}
+            itemStyle={{ color: 'var(--muted)' }}
             formatter={(value, name) =>
               (value as number) > 0 ? [`${value} seats`, name as string] : null
             }
@@ -94,7 +94,7 @@ export function StateStackedBar({ snapshot }: { snapshot: Snapshot | undefined }
               {data.map((entry) => (
                 <Cell
                   key={`${entry.state}-${party}`}
-                  fill={party === 'Others' ? '#52525b' : partyColor(party)}
+                  fill={party === 'Others' ? UNKNOWN_COLOR : partyColor(party)}
                 />
               ))}
             </Bar>

@@ -35,7 +35,7 @@ export function StaleBanner({ dataSource, stale, asOf }: StaleBannerProps) {
   return (
     <div
       role="alert"
-      className="w-full bg-amber-900/80 border-b border-amber-600 px-4 py-2 text-amber-200 text-sm text-center"
+      className="w-full bg-warn/15 border-b border-warn/40 px-4 py-2 text-warn text-sm text-center"
     >
       {dataSource === 'watchdog_minimal' || dataSource === 'watchdog_degraded'
         ? `ECI portal degraded — last refresh ${hhmm} IST`
