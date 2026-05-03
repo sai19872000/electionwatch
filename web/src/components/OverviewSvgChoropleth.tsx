@@ -4,36 +4,10 @@ import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { ALLIANCE_COLORS, UNKNOWN_COLOR, OPACITY } from '@/lib/party-colors';
 import type { Snapshot } from '@/lib/types';
-
-// State SVG path data (simplified shapes; T1 replaces with authoritative boundaries).
-// id corresponds to ECI state_code values.
-const STATE_PATHS: Record<string, { d: string; label: string; labelXY: [number, number] }> = {
-  S25: {
-    label: 'West Bengal',
-    labelXY: [305, 175],
-    d: 'M280,100 L340,100 L355,140 L350,200 L330,240 L300,250 L275,230 L270,190 L265,150 Z',
-  },
-  S03: {
-    label: 'Assam',
-    labelXY: [393, 128],
-    d: 'M340,95 L430,90 L445,110 L440,140 L420,155 L380,158 L355,145 L340,120 Z',
-  },
-  S11: {
-    label: 'Kerala',
-    labelXY: [180, 430],
-    d: 'M170,350 L195,345 L205,380 L210,430 L205,490 L185,510 L165,495 L155,460 L150,420 L155,380 Z',
-  },
-  S22: {
-    label: 'Tamil Nadu',
-    labelXY: [237, 430],
-    d: 'M205,340 L260,330 L285,360 L290,410 L280,460 L255,510 L225,530 L200,510 L185,480 L185,440 L195,390 Z',
-  },
-  U06: {
-    label: 'Puducherry',
-    labelXY: [265, 490],
-    d: 'M248,472 L258,470 L262,482 L255,490 L245,488 Z',
-  },
-};
+import {
+  STATE_OUTLINES,
+  STATE_OUTLINES_VIEWBOX,
+} from '@/lib/state_outlines.generated';
 
 // Derived from alliance_map_2026.json — used to color state-level choropleth
 const PARTY_TO_ALLIANCE: Record<string, keyof typeof ALLIANCE_COLORS> = {
@@ -87,11 +61,11 @@ export function OverviewSvgChoropleth({ snapshot }: OverviewSvgChoroplethProps) 
   return (
     <div className="w-full flex justify-center" role="img" aria-label="India 5-state overview choropleth">
       <svg
-        viewBox="0 0 500 600"
+        viewBox={`0 0 ${STATE_OUTLINES_VIEWBOX.width} ${STATE_OUTLINES_VIEWBOX.height}`}
         className="w-full max-w-xs sm:max-w-sm"
         aria-hidden="false"
       >
-        {Object.entries(STATE_PATHS).map(([code, { d, label, labelXY }]) => {
+        {STATE_OUTLINES.map(({ code, d, label, short, labelXY }) => {
           const fill = getStateFill(code);
           const opacity = getStateOpacity(code);
           const stateData = snapshot?.states[code];
@@ -126,13 +100,11 @@ export function OverviewSvgChoropleth({ snapshot }: OverviewSvgChoroplethProps) 
                 fontFamily="Geist, system-ui"
                 className="pointer-events-none select-none"
               >
-                {code === 'U06' ? 'PY' : code === 'S03' ? 'AS' : code === 'S11' ? 'KL' : code === 'S22' ? 'TN' : 'WB'}
+                {short}
               </text>
             </g>
           );
         })}
-
-        {/* Half-way majority line at ~y midpoint for visual reference — not shown for now */}
       </svg>
     </div>
   );
