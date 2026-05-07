@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import { BootScreen } from './BootScreen';
 import { AuraCredit } from './AuraCredit';
 import { printAuraSignature } from './printAuraSignature';

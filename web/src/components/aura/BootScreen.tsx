@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { AuraMark } from "./AuraMark";
 
 interface BootScreenProps {
