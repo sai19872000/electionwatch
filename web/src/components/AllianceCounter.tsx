@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useSpring, useMotionValueEvent, motion } from 'framer-motion';
+import { useSpring, useMotionValueEvent, motion } from 'motion/react';
 import { useState } from 'react';
 import { ALLIANCE_COLORS } from '@/lib/party-colors';
 import { AnimatedNumber } from './AnimatedNumber';

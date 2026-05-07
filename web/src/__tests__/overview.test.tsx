@@ -6,8 +6,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { AllianceCounter } from '@/components/AllianceCounter';
 
-// Mock framer-motion to avoid animation complexity in tests
-vi.mock('framer-motion', () => ({
+// Mock motion/react to avoid animation complexity in tests
+vi.mock('motion/react', () => ({
   motion: {
     div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }) => <div {...props}>{children}</div>,
   },
